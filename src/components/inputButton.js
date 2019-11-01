@@ -26,7 +26,7 @@ const InputButton = () => {
   return (
     <form className='InputButton' onSubmit={handleSubmit}>
       <input type='email' placeholder='Your email adress' onChange={inputHandler} value={emailValue} />
-      <button className={subscriptionState ? 'subscribed':''} onClick={handleSubmit}>{subscriptionState ? 'Thanks for subscribing!':'Sign up for newsletter'}</button>
+      <button className={subscriptionState ? 'subscribed':''} onClick={handleSubmit}>{subscriptionState ? 'Thanks for subscribing!':'Signup for the newsletter'}</button>
     </form>
   )
 }

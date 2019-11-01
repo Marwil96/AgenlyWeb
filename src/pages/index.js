@@ -10,6 +10,8 @@ import TextSection from "../components/textSection"
 import section1Img from '../images/Group 3.svg'
 import setupIMG from '../images/setup.svg'
 import modulesIMG from '../images/modules.svg'
+// import webMockup from '../images/mockuplow.svg'
+import ProcessSection from "../components/processSection"
 
 const IndexPage = () => (
   <Layout>
@@ -24,21 +26,23 @@ const IndexPage = () => (
       modifier='left' 
       img={setupIMG} 
       title={<span>Have a <span className='highlighted'>conversation</span> with us and we will create the best website for you.</span>}
-      text={'For all the non-designers out there. We know its hard to create an website even through the various website creators. Thats why we have built an unique setup process that is conversational instead of visual so we can learn as much as possible about your business to create the best website for you.'} 
+      text={"For all the non-designers out there. We know its hard to create a website even with the various website creators. That's why we have built a unique setup process that is conversational instead of visual so we can learn as much as possible about your business to create the best website for you."} 
     />
+
+    <ProcessSection />
 
     <TextSection 
       modifier='right' 
       img={section1Img} 
-      title={<span>In an forever <span className='highlighted'>changing</span> landscape, your website need to change with it.</span>}
-      text={'The competition to be seen to the customers online has only grown fiercer. We help you to be seen by optimising your SEO and working iterative with your website through A/B testing. And that without you even moving your finger.'} 
+      title={<span>In a forever <span className='highlighted'>changing</span> landscape, your website needs to change with it.</span>}
+      text={'The competition to be seen to the customers online has only grown fiercer. We help you to be seen by optimizing your SEO and working iteratively with your website through A/B testing. And that without you lifting a finger.'} 
     />
 
     <TextSection 
       modifier='left' 
       img={modulesIMG} 
       title={<span>Different businesses have different <span className='highlighted'>needs.</span></span>}
-      text={'That’s why we have plenty of modules to choose from, everything from resturant menus to employee sections.'} 
+      text={'That’s why we have plenty of modules to choose from, everything from restaurant menus to employee sections.'} 
     />
   </Layout>
 )

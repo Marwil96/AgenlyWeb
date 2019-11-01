@@ -1,0 +1,48 @@
+.Foldout {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 16px 0;
+
+  &__button {
+    background: none;;
+    border: 0;
+    align-self: flex-start;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 450;
+    color: $color-oil;
+  }
+
+  &__button-arrow {
+    height: 1.6rem;
+    transform: rotate(0deg);
+    transition: transform 450ms ease;
+  }
+
+  &__text {
+    margin-top: 4px;
+    display: block;
+  }
+
+  &.collapsed {
+    .Foldout__text {
+      display: none;
+    }
+
+    .Foldout__button-arrow {
+      transform: rotate(-180deg);
+    }
+  }
+}
