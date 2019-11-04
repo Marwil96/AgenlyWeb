@@ -2,6 +2,10 @@
   @include mainContainer;
   flex-direction: column;
   background: #F5EAE3;
+  
+  @include respond(over-max) {
+    border-radius: 8px;
+  }
 
   &__title {
     max-width: 40rem;

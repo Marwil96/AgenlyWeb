@@ -50,6 +50,12 @@
         @content;
       }
     }
+
+    @if $breakpoint == over-max {
+      @media only screen and (min-width: 90em) {
+        @content;
+      }
+    }
   }
   
   @mixin mainContainer {
