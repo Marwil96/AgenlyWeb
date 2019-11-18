@@ -15,7 +15,7 @@ import ProcessSection from "../components/processSection"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Agenly, Your personal webagency, that only gets better over time. We create your website through AI." />
+    {/* <SEO /> */}
     <section className='introduction'>
       <h1 className='introduction__title'>Your personal webagency, that only gets better over <span className='Highlighted'>time.</span></h1>
       <span className='introduction__subtitle'>You tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best solution for you.</span>

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Agenly, Your personal webagency, that only gets better over time. We create your website through AI.`,
-    description: `Website creator. You tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.`,
-    author: `@William Martinsson`,
+    title: `Build a Website - Webbyrå – Website Builder – Agenly`,
+    description: `With Agenly you tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.`,
+    author: `@Agenly`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
