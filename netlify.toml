@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/app/*"
+  to = "https://laughing-perlman-57b2e6.netlify.com/app/:splat"
+  status = 200
+  force = true
