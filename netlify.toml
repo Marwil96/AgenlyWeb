@@ -11,7 +11,7 @@
     force = true
 
     [[redirects]]
-    from = "https://agenly.site/sites/*"
-    to = "https://laughing-perlman-57b2e6.netlify.com/sites/:splat"
+    from = "https://agenly.site/sites/:username"
+    to = "https://laughing-perlman-57b2e6.netlify.com/sites/:username"
     status = 200
     force = true
