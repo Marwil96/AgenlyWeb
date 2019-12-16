@@ -10,7 +10,7 @@ import TextSection from "../components/textSection"
 import section1Img from '../images/Group 3.svg'
 import setupIMG from '../images/setup.svg'
 import modulesIMG from '../images/modules.svg'
-// import webMockup from '../images/mockuplow.svg'
+// import webMockup from '../images/mockuplow.svg/'
 import ProcessSection from "../components/processSection"
 
 const IndexPage = () => (
