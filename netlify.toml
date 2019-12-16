@@ -1,24 +1,24 @@
 [[redirects]]
   from = "/login"
-  to = "https://laughing-perlman-57b2e6.netlify.com/"
-  status = 200
+  to = "https://laughing-perlman-57b2e6.netlify.com/login"
+  status = 301
   force = true
 
   [[redirects]]
   from = "/createAccount"
   to = "https://laughing-perlman-57b2e6.netlify.com/createAccount"
-  status = 200
+  status = 301
   force = true
 
 
   [[redirects]]
   from = "/create"
   to = "https://laughing-perlman-57b2e6.netlify.com/create"
-  status = 200
+  status = 301
   force = true
 
   [[redirects]]
   from = "/sites"
   to = "https://laughing-perlman-57b2e6.netlify.com/sites"
-  status = 200
+  status = 301
   force = true
