@@ -1,21 +1,35 @@
 .Header {
   display: flex;
-  justify-content: space-between;
-  position: sticky;
+  // position: sticky;
   top: 0;
-  background: white;
-  // width: 100%;
-  @include mainContainer;
-  padding-top: 32px !important;
-  padding-bottom: 3.2rem!important;
+  background: $color-primary-green;
+  color: $color-secondary-yellow;
+  width: 100%;
+  z-index: 1000;
+  transition: background ease 450ms;
 
-  @include respond(phone) {  
+  &__logo {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    @include mainContainer;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 26px !important;
+    padding-bottom: 26px!important;
+
+     @include respond(phone) {  
     padding-top: 16px!important;
     padding-bottom: 16px!important;
 
     form {
       display: none;
     }
+  }
   }
 
   &__links {
@@ -48,6 +62,24 @@
       button {
         border-radius: 0px 6px 6px 0px;
         padding: 0 10px;
+      }
+    }
+  }
+
+  &__is-fixed {
+    position: sticky;
+    background: $color-white;
+    animation: slideIn 650ms ease forwards;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+    color: $color-oil;
+
+    @keyframes slideIn {
+      from {
+        top: -100px;
+      }
+      to {
+        top:0;
       }
     }
   }

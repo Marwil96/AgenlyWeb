@@ -21,10 +21,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: 'https://work.us15.list-manage.com/subscribe/post?u=9d724d30731ff3a65ee002961&amp;id=4fdde18145', // add your MC list endpoint here; see instructions below
-      }
+        endpoint:
+          "https://work.us15.list-manage.com/subscribe/post?u=9d724d30731ff3a65ee002961&amp;id=4fdde18145", // add your MC list endpoint here; see instructions below
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

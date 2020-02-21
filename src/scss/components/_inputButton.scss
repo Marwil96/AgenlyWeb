@@ -17,6 +17,8 @@
     flex: 0.6;
     max-width: 300px;
     border-right: 0;
+    font-family: Inter;
+    font-weight: 500;
     // background: #f1f1f1;
 
     &:focus {
@@ -33,8 +35,15 @@
     font-size: 1.6rem;
     color: $color-white;
     background: #32757B;
+    font-family: Inter;
+    font-weight: 500;
+    cursor: pointer;
 
     transition: background ease 450ms;
+
+    &::hover {
+      cursor: pointer;
+    }
 
     &.subscribed {
       background: #40C390;
@@ -63,6 +72,33 @@
       border-radius: 4px;
       padding: 16px;
       cursor: pointer;
+    }
+  }
+
+
+  
+  &__primary {
+    input {
+      background-color: $color-primary-green;
+      color: $color-secondary-yellow;
+      border: 1px solid $color-secondary-yellow;
+
+      &::placeholder {
+        color: #ffd86552;
+      }
+    }
+
+    button {
+      color: $color-primary-green;
+      background-color: $color-secondary-yellow;
+      border: 1px solid $color-secondary-yellow;
+      font-weight: 600;
+
+      &.subscribed {
+        background: #40C390;
+        border: 1px solid #40C390;
+        color: white;
+      }
     }
   }
 }

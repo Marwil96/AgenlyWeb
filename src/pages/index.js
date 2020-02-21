@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import "../scss/main.scss"
 import InputButton from "../components/inputButton"
 import TextSection from "../components/textSection"
+import Introduction from "../components/introduction"
 
 import section1Img from '../images/Group 3.svg'
 import setupIMG from '../images/setup.svg'
@@ -16,11 +17,8 @@ import ProcessSection from "../components/processSection"
 const IndexPage = () => (
   <Layout>
     <SEO title='Build a Website - Webbyrå – Website Builder – Agenly' description='With Agenly you tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.' author='William Martinsson' />
-    <section className='introduction'>
-      <h1 className='introduction__title'>Your personal webagency, that only gets better over <span className='Highlighted'>time.</span></h1>
-      <span className='introduction__subtitle'>You tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best solution for you.</span>
-      <InputButton />
-    </section>
+
+    <Introduction />
 
     <TextSection 
       modifier='left' 
