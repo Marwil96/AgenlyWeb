@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "flickity": "^2.2.1",
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-google-analytics": "^2.1.23",
@@ -21,6 +22,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-flickity-component": "^3.5.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "typeface-inter": "^3.12.0",

@@ -1,38 +1,54 @@
 .Footer {
-  width: 100%;
-  padding: 15rem 0;
-  display: flex;
+  @include mainContainer;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: #FFD865;
-  
-  @include respond(phone) {
-    width: auto;  
-    padding: 4.7rem 1.6rem;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $color-oil;
+    border-bottom: 1px solid $color-oil;
+    padding: 3.2rem 0rem
   }
 
-  span {
-    font-size: 6rem;
+  &__column {
+    display: flex;
+    flex-direction: column;
+    // width: 236px;
+    font-family: Inter;
+    margin-right: 64px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__column-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+  }
+
+  &__column-link {
+    font-size: 1.6rem;
     font-weight: 500;
-    color: $color-oil;
-    text-align: center;
-    max-width: 780px;
-    line-height: 1.2;
-    margin-bottom: 6.4rem;
+    text-decoration: underline;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    color: #696969;
 
-    @include respond(phone) { 
-      font-size: 4.8rem;
-      text-align: left;
-      margin-bottom: 3.2rem;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  .InputButton {
-    width: 100%;
+   &__column-text {
+     font-size: 1.6rem;
+     color: #696969;
+   }
 
-    input, button {
-      border: 0;
-    }
+  &__info {
+    margin-top: 1.6rem;
   }
 }

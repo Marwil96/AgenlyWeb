@@ -1,0 +1,17 @@
+.ActionBar {
+    @include mainContainer;
+    background:$color-secondary-yellow;
+    align-items: center;
+
+    @include respond(over-max) {
+      border-radius: 8px;
+    }
+
+    &__text {
+      color: $color-primary-green;
+      font-size: 3.2rem;
+      font-family: Inter;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+}

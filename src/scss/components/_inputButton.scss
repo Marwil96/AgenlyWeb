@@ -9,14 +9,16 @@
   input {
     width: 400px;
     height: 100%;
-    border-radius: 6px 0px 0px 6px;
+    // border-radius: 6px 0px 0px 6px;
+    border-radius: 4px;
+    margin-right: 8px;
     border: 1px solid $color-oil;
     padding-left: 16px;
     font-size: 1.6rem;
     color: $color-oil;
     flex: 0.6;
     max-width: 300px;
-    border-right: 0;
+    // border-right: 0;
     font-family: Inter;
     font-weight: 500;
     // background: #f1f1f1;
@@ -29,9 +31,10 @@
   button {
     height: 100%;
     padding: 0 16px;
-    border-radius: 0 6px 6px 0;
+    // border-radius: 0 6px 6px 0;
+    border-radius: 4px;
     border: 1px solid #32757B;
-    border-left: 0;
+    // border-left: 0;
     font-size: 1.6rem;
     color: $color-white;
     background: #32757B;
@@ -41,7 +44,7 @@
 
     transition: background ease 450ms;
 
-    &::hover {
+    &:hover {
       cursor: pointer;
     }
 
@@ -64,6 +67,7 @@
       padding: 16px;
       margin-bottom: 8px;
       max-width: initial;
+      margin-right: 0px;
     }
 
     button {

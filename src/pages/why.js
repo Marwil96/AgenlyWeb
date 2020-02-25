@@ -2,12 +2,14 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageHeader from "../components/pageHeader"
 
 import "../scss/main.scss"
 
 const Why = () => (
   <Layout>
     <SEO title="Home" />
+    <PageHeader title='Why we are building Agenly.' subject={'About us'}/>
     <section className='Why'>
       <h3>Why?</h3>
       <span>We live in a digital world, that's in constant change. Most companies need a digital platform if they want to be able to compete and be visible to their customers.<br></br><br></br>

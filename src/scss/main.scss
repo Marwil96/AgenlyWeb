@@ -4,13 +4,18 @@
 @import './base/base';
 @import './base/typography';
 
+@import './components/actionBar';
+@import './components/button';
+@import './components/exampleSites';
 @import './components/header';
 @import './components/introduction';
 @import './components/inputButton';
 @import './components/textSection';
+@import './components/tenReasons';
 @import './components/footer';
 @import './components/foldout';
 @import './components/processSection';
+@import './components/pageHeader';
 
 @import './pages/index.scss';
 @import './pages/why';
