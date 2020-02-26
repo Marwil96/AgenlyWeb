@@ -19,10 +19,8 @@ const Layout = ({ children }) => {
   const updateHeader = (positionY) => {
     if (positionY > 400 & headerState === false) {
       setHeaderFixed(true)
-      console.log('FIXED', positionY, headerState)
     } else if (positionY === 0 & headerState === true) {
       setHeaderFixed(false)
-      console.log('relative', positionY, headerState)
     }
   }
 
