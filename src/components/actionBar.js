@@ -5,7 +5,7 @@ const ActionBar = () => {
   return (
     <section className="ActionBar">
       <span className='ActionBar__text'>Be a part of the ride, sign up for the newsletter.</span>
-      <InputButton />
+      <InputButton modifier={'actionBar'} />
     </section>
   )
 }

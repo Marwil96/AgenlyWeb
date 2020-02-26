@@ -9,7 +9,11 @@
     justify-content: space-between;
     border-top: 1px solid $color-oil;
     border-bottom: 1px solid $color-oil;
-    padding: 3.2rem 0rem
+    padding: 3.2rem 0rem;
+
+    @include respond(phone) { 
+      flex-direction: column;
+    }
   }
 
   &__column {
@@ -17,7 +21,16 @@
     flex-direction: column;
     // width: 236px;
     font-family: Inter;
-    margin-right: 64px;
+    margin-right: 6.4rem;
+
+    @include respond(phone) { 
+      margin-right: 0;
+      margin-bottom: 1.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -33,10 +46,10 @@
   &__column-link {
     font-size: 1.6rem;
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: underline!important;
     margin-bottom: 1.2rem;
     cursor: pointer;
-    color: #696969;
+    color: #696969!important;
 
     &:last-child {
       margin-bottom: 0;

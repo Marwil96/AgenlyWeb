@@ -3,6 +3,7 @@
   background-color: $color-primary-green;
   color: $color-secondary-yellow;
   padding-top: 7rem;
+  padding-bottom: 3.2rem;
 
   &__container {
     @include mainContainer;
@@ -17,10 +18,13 @@
     font-weight: 800;
   }
 
+  button {
+    margin-top: 2.4rem;
+  }
+
   &__title {
     font-size: 48px;
     line-height: 1.25;
-    margin-bottom: 24px;
     font-weight: 700;
     max-width: 900px;
 

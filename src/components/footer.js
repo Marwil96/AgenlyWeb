@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import InputButton from "./inputButton"
 
 const Footer = () => {
@@ -7,8 +8,8 @@ const Footer = () => {
       <section className="Footer__container">
         <div className="Footer__column">
           <span className="Footer__column-title">Kontakta oss</span>
-          <span className="Footer__column-link">+46768023804</span>
-          <span className="Footer__column-link">contact@agenly.se</span>
+          {/* <span className="Footer__column-link">+46768023804</span> */}
+          <a className="Footer__column-link" href='mailto:william@agenly.se'>william@agenly.se</a>
         </div>
 
         <div className="Footer__column">
@@ -19,8 +20,10 @@ const Footer = () => {
 
         <div className="Footer__column">
           <span className="Footer__column-title">Länkar</span>
-          <span className="Footer__column-link">Moduler</span>
-          <span className="Footer__column-link">Varför</span>
+          <Link className="Footer__column-link" to="/modules">
+            Moduler
+          </Link>
+          <Link className="Footer__column-link" to="/why"> Varför </Link>
           <span className="Footer__column-link">Uppdateringar</span>
         </div>
 

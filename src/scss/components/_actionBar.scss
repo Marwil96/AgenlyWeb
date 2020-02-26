@@ -7,11 +7,19 @@
       border-radius: 8px;
     }
 
+     @include respond(phone) { 
+      flex-direction: column;
+    }
+
     &__text {
       color: $color-primary-green;
       font-size: 3.2rem;
       font-family: Inter;
       font-weight: 500;
       line-height: 1.2;
+
+      @include respond(phone) {  
+        margin-bottom: 2.4rem;
+      }
     }
 }
