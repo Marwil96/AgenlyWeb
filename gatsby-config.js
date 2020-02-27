@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Build a Website - Webbyrå – Website Builder – Agenly`,
+    title: `Build your own Website – Website Builder – Agenly`,
     description: `With Agenly you tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.`,
     author: `@Agenly`,
   },
