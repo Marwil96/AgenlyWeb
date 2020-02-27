@@ -1,6 +1,5 @@
 import React from 'react';
-import { checkPropTypes } from 'prop-types';
-import Button from './button';
+// import Button from './button';
 
 const PageHeader = (props) => {
   return (

@@ -1,6 +1,10 @@
 .ModulesLibrary {
   @include mainContainer;
   margin-top: -14rem;
+
+  @include respond(phone) {
+    margin-top: -8.4rem;
+  }
   
   &__item {
     width: calc(33% - (64px + 3.2rem));

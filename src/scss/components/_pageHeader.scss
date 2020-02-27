@@ -5,9 +5,18 @@
   padding-top: 7rem;
   padding-bottom: 3.2rem;
 
+  @include respond(phone) {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+
   &__container {
     @include mainContainer;
     flex-direction: column;
+
+    @include respond(phone) {
+      margin-bottom: 0;
+    }
   }
   
 
@@ -23,16 +32,24 @@
     margin-top: 2.4rem;
   }
 
+  &__text {
+    font-size: 1.8rem;
+
+    @include respond(phone) { 
+      font-size: 1.6rem;
+    }
+  }
+
   &__title {
-    font-size: 48px;
+    font-size: 4.8rem;
     line-height: 1.25;
-    font-weight: 700;
+    font-weight: 600;
     max-width: 900px;
 
     @include respond(phone) {
-      font-size: 4rem;
+      font-size: 3.2rem;
       text-align: left;
-      margin-bottom: 16px;
+      // margin-bottom: 8px;
     }
   }
 }

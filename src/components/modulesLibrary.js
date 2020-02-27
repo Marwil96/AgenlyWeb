@@ -77,17 +77,19 @@ const ModulesLibrary = (props) => {
   data.allFile.nodes.map((item) => {
     const name = item.name;
     imageArray[name] = {url:item.publicURL}
+    
+    return null;
   })
-
-  console.log(data.allFile, props, imageArray)
+  
   return (
     <section className="ModulesLibrary">
       <div className="ModulesLibrary__container">
-        {modulesArray.map(item => (
-          <div className="ModulesLibrary__item">
+        {modulesArray.map((item, index) => (
+          <div className="ModulesLibrary__item" key={index}>
             <img
               className="ModulesLibrary__image"
               src={imageArray[item.image].url}
+              alt={item.title}
             />
             <h3 className="ModulesLibrary__title">{item.title}</h3>
             <span className="ModulesLibrary__text">{item.text}</span>

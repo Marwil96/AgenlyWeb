@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "../scss/main.scss"
-import InputButton from "../components/inputButton"
 import TextSection from "../components/textSection"
 import Introduction from "../components/introduction"
 

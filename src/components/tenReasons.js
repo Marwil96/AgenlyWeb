@@ -42,7 +42,7 @@ const TenReasons = () => {
         static // default false
       >
         {reasons.map((item, index) => (
-          <div className="TenReasons__item">
+          <div className="TenReasons__item" key={index}>
             <span className="TenReasons__item-number">{index + 1}.</span>
             <h5 className="TenReasons__item-title">{item.title}</h5>
             <span className="TenReasons__item-text">{item.text}</span>

@@ -12,10 +12,10 @@ const ExampleSites = () => {
 
   return (
     <section className="ExampleSites">
-      {sites.map(item => (
-        <div className="ExampleSites__item">
+      {sites.map((item, index) => (
+        <div className="ExampleSites__item" key={index}>
           <a target='__blank' href={item.link}>
-            <img className="ExampleSites__item-image" src={item.image} />
+            <img className="ExampleSites__item-image" src={item.image} alt={item.image}/>
           </a>
         </div>
       ))}
