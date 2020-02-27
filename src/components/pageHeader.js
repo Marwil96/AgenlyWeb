@@ -9,7 +9,7 @@ const PageHeader = (props) => {
         <h5 className='PageHeader__subject'>{props.subject}</h5>
         <h1 className='PageHeader__title'>{props.title}</h1>
         <span className='PageHeader__text'>{props.text}</span>
-        <Button text='Get Started' />
+        {/* <Button text='Get Started' /> */}
       </div>
     </section>
   )

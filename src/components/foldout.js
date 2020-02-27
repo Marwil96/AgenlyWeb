@@ -3,7 +3,6 @@ import React from "react"
 const Foldout = ({index, title, text}) => {
   const toggleText = (e) => {
     const targetId = e.currentTarget;
-    console.log(index)
     document.querySelector(`#Foldout-${index}`).classList.toggle('collapsed')
   }
   

@@ -7,24 +7,28 @@ const Footer = () => {
     <footer className="Footer">
       <section className="Footer__container">
         <div className="Footer__column">
-          <span className="Footer__column-title">Kontakta oss</span>
+          {/* <span className="Footer__column-title">Kontakta oss</span> */}
+          <span className="Footer__column-title">Contact us</span>
           {/* <span className="Footer__column-link">+46768023804</span> */}
           <a className="Footer__column-link" href='mailto:william@agenly.se'>william@agenly.se</a>
         </div>
 
-        <div className="Footer__column">
-          <span className="Footer__column-title">Följ oss</span>
+        {/* <div className="Footer__column"> */}
+          {/* <span className="Footer__column-title">Följ oss</span> */}
+          {/* <span className="Footer__column-title">Follow</span>
           <a className="Footer__column-link">Facebook</a>
           <a className="Footer__column-link">Twitter</a>
-        </div>
+        </div> */}
 
         <div className="Footer__column">
-          <span className="Footer__column-title">Länkar</span>
-          <Link className="Footer__column-link" to="/modules">
+          <span className="Footer__column-title">Links</span>
+          {/* <span className="Footer__column-title">Länkar</span> */}
+          {/* <Link className="Footer__column-link" to="/modules">
             Moduler
-          </Link>
-          <Link className="Footer__column-link" to="/why"> Varför </Link>
-          <span className="Footer__column-link">Uppdateringar</span>
+          </Link> */}
+          {/* <Link className="Footer__column-link" to="/why"> Varför </Link> */}
+          <Link className="Footer__column-link" to="/why"> Why </Link>
+          {/* <span className="Footer__column-link">Uppdateringar</span> */}
         </div>
 
         <div className="Footer__column">
@@ -37,7 +41,8 @@ const Footer = () => {
         </div>
       </section>
       <span className="Footer__info">
-        © Agenly 2020 · Villkor · Integritetspolicy · Cookies
+        {/* © Agenly 2020 · Villkor · Integritetspolicy · Cookies */}
+        {/* Agenly 2020 */}
       </span>
     </footer>
   )

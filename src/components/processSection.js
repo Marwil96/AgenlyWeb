@@ -6,7 +6,7 @@ const ProcessSection = () => {
     {title: 'Setup.', text:'We ask you questions about your business through a conversational interface. Everything from business model to market segmentation.'},
     {title: 'Evaluating answers.', text:"We evaluate your answers differently depending on what business you're in. As an example, if you want a website for a restaurant we put a higher focus on the design aspect of the website."},
     {title: 'Build.', text:'When we have evaluated your answers we can start building your website. Our software then picks out components from our component-catalog that fits your business. Then we apply your branding to the website.'},
-    {title: 'Improve.', text:'When your website is live, we directly try to make it even better through modern software technics. If your numbers are worse one month we respond to it immediately without you lifting a finger.'}
+    {title: 'Improve.', text: 'When your website is live, we immediately try to make it even better through modern software technics. If your numbers are worse one month we respond to it immediately without you lifting a finger.'}
   ]
   return (
     <section className='ProcessSection'>

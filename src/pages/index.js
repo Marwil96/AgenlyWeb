@@ -47,8 +47,8 @@ const IndexPage = () => (
       img={modulesIMG} 
       title={<span>Different businesses have different <span className='highlighted'>needs.</span></span>}
       text={'That’s why we have plenty of modules to choose from, everything from restaurant menus to employee sections.'} 
-      button='See the Modules.'
-      link='/modules'
+      // button='See the Modules.'
+      // link='/modules'
     />
 
     <ExampleSites />
