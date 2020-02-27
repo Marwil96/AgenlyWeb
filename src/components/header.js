@@ -12,9 +12,10 @@ const Header = (props) => {
           </Link>
         </div>
         <div className='Header__links'>
-          <Link to='/why'>Why?</Link>
+          {/* <Link to='/why'>Why?</Link> */}
+          <Link to='/why'>Varför?</Link>
           {/* <span>Newsletter</span> */}
-          <InputButton modifier={props.fixed ? null : 'primary'} />
+          <InputButton modifier={props.fixed ? null : 'primary'} small={true} />
         </div>
       </div>
     </header>

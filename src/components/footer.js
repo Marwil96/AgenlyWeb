@@ -6,8 +6,8 @@ const Footer = () => {
     <footer className="Footer">
       <section className="Footer__container">
         <div className="Footer__column">
-          {/* <span className="Footer__column-title">Kontakta oss</span> */}
-          <span className="Footer__column-title">Contact us</span>
+          <span className="Footer__column-title">Kontakta oss</span>
+          {/* <span className="Footer__column-title">Contact us</span> */}
           {/* <span className="Footer__column-link">+46768023804</span> */}
           <a className="Footer__column-link" href='mailto:william@agenly.se'>william@agenly.se</a>
         </div>
@@ -20,22 +20,25 @@ const Footer = () => {
         </div> */}
 
         <div className="Footer__column">
-          <span className="Footer__column-title">Links</span>
-          {/* <span className="Footer__column-title">Länkar</span> */}
-          {/* <Link className="Footer__column-link" to="/modules">
+          {/* <span className="Footer__column-title">Links</span> */}
+          <span className="Footer__column-title">Länkar</span>
+          <Link className="Footer__column-link" to="/modules"> 
             Moduler
-          </Link> */}
-          {/* <Link className="Footer__column-link" to="/why"> Varför </Link> */}
-          <Link className="Footer__column-link" to="/why"> Why </Link>
+          </Link> 
+          <Link className="Footer__column-link" to="/why"> Varför </Link>
+          {/* <Link className="Footer__column-link" to="/why"> Why </Link> */}
           {/* <span className="Footer__column-link">Uppdateringar</span> */}
         </div>
 
         <div className="Footer__column">
           <span className="Footer__column-title">Agenly</span>
-          <span className="Footer__column-text">
+          {/* <span className="Footer__column-text">
             You tell us about your business and we handle the rest. We use a
             combination between conversational UI and AI to create the best
             solution for you.
+          </span> */}
+          <span className="Footer__column-text">
+            Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.
           </span>
         </div>
       </section>

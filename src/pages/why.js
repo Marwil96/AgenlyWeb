@@ -10,7 +10,8 @@ import ActionBar from "../components/actionBar"
 const Why = () => (
   <Layout>
     <SEO title="Home" />
-    <PageHeader title='Why we are building Agenly.' subject={'About us'}/>
+    {/* <PageHeader title='Why we are building Agenly.' subject={'About us'}/> */}
+    <PageHeader title='Varför vi bygger Agenly.' subject={'Om oss'} />
     <section className='Why'>
       <h3>Why?</h3>
       <span>We live in a digital world, that's in constant change. Most companies need a digital platform if they want to be able to compete and be visible to their customers.<br></br><br></br>

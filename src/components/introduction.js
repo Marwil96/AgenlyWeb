@@ -5,12 +5,10 @@ const Introduction = () => {
   return (
     <section className="introduction">
       <h1 className="introduction__title">
-        Your personal webagency, that only gets better over <span className="Highlighted">time.</span>
+        Din personliga webbbyrå som bara blir bättre över <span className="Highlighted">tid.</span>
       </h1>
       <span className="introduction__subtitle">
-        You tell us about your business and we handle the rest. We use a
-        combination between conversational UI and AI to create the best solution
-        for you.
+        Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.
       </span>
       <InputButton modifier='primary' />
     </section>

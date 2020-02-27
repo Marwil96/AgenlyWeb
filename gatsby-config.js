@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Build your own Website – Website Builder – Agenly`,
-    description: `With Agenly you tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.`,
+    title: `Gratis Hemsida – Bygg din egna hemsida idag – Hemside Byggare – Agenly.se`,
+    description: `Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.`,
     author: `@Agenly`,
   },
   plugins: [
