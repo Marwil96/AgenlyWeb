@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Build a Website - Webbyrå – Website Builder – Agenly`,
+    title: `Build your own Website – Website Builder – Agenly`,
     description: `With Agenly you tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.`,
     author: `@Agenly`,
   },
@@ -15,16 +15,24 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `modules`,
+        path: `${__dirname}/src/images/modules`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-37970043-3",
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: 'https://work.us15.list-manage.com/subscribe/post?u=9d724d30731ff3a65ee002961&amp;id=4fdde18145', // add your MC list endpoint here; see instructions below
-      }
+        endpoint:
+          "https://work.us15.list-manage.com/subscribe/post?u=9d724d30731ff3a65ee002961&amp;id=4fdde18145", // add your MC list endpoint here; see instructions below
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

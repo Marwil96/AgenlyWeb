@@ -1,0 +1,26 @@
+.ExampleSites {
+  @include mainContainer;
+  justify-content: space-between;
+  background: #F5EAE3;
+
+  @include respond(over-max) {
+    border-radius: 8px;
+  }
+
+  &__item {
+    // width: 28%;
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+  }
+
+  &__item-image {
+    // width: 100%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
