@@ -4,6 +4,8 @@
   justify-content: space-between;
   padding: 6rem 0;
 
+  transition: transform ease 750ms, opacity 500ms ease ;
+
 
   @include respond(phone) { 
     flex-direction: column;
