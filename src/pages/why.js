@@ -2,12 +2,15 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageHeader from "../components/pageHeader"
 
 import "../scss/main.scss"
+import ActionBar from "../components/actionBar"
 
 const Why = () => (
   <Layout>
     <SEO title="Home" />
+    <PageHeader title='Why we are building Agenly.' subject={'About us'}/>
     <section className='Why'>
       <h3>Why?</h3>
       <span>We live in a digital world, that's in constant change. Most companies need a digital platform if they want to be able to compete and be visible to their customers.<br></br><br></br>
@@ -16,6 +19,7 @@ const Why = () => (
         When we have received data from various clients, we can start comparing the different sites made by us with each other and identify faster what works and what doesn't work. New clients can start on a foundation built with existing client's data. Which creates a loop of product-enhancement, that helps both new and existing clients.
       </span>
     </section>
+    <ActionBar />
   </Layout>
 )
 

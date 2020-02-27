@@ -1,0 +1,22 @@
+.Button {
+  width: fit-content;
+  border-radius: 4px;
+  background-color: $color-secondary-yellow;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 350ms ease;
+
+  &__primary {
+    background-color: $color-jungle;
+    color: $color-white;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

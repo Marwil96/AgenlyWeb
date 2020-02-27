@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-const InputButton = () => {
+const InputButton = (props) => {
   const [emailValue, setEmailValue] = useState('')
   const [subscriptionState, setSubscriptionState] = useState(false)
 
@@ -14,7 +14,6 @@ const InputButton = () => {
     if(result.result === 'success') {
       setEmailValue('')
     }
-    console.log(result)
   }
 
   const inputHandler = (e) => {
@@ -24,9 +23,9 @@ const InputButton = () => {
   }
 
   return (
-    <form className='InputButton' onSubmit={handleSubmit}>
+    <form className={props.modifier !== undefined ? `InputButton InputButton__${props.modifier}` : `InputButton`} onSubmit={handleSubmit}>
       <input type='email' placeholder='Your email adress' onChange={inputHandler} value={emailValue} />
-      <button className={subscriptionState ? 'subscribed':''} onClick={handleSubmit}>{subscriptionState ? 'Thanks for subscribing!':'Signup for the newsletter'}</button>
+      <button className={subscriptionState ? 'subscribed' : ''} onClick={handleSubmit}>{subscriptionState ? 'Thanks for subscribing!' :'Subscribe for newsletter'}</button>
     </form>
   )
 }
