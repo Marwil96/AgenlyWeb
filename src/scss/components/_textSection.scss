@@ -23,6 +23,15 @@
 
     @include respond(phone) { 
       flex-direction: column;
+       margin-right: 0;
+    }
+
+
+    @include respond(tab-port) {
+      .TextSection__img {
+        margin-right: 3.2rem;
+        margin-left: 0;
+      }
     }
   }
 
@@ -58,10 +67,16 @@
 
   &__img {
     max-width: 40rem;
-    
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      margin-left: 3.2rem;
+    }
+
     @include respond(phone) {  
       max-width: inherit;
       width: 100%;
+      margin-left: 0;
     }
   }
 }
