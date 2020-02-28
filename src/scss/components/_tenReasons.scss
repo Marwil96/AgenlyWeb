@@ -33,6 +33,11 @@
     max-width: 332px;
     min-width: 332px;
     cursor: grab;
+
+    @include respond(phone) {
+      min-width: 250px;
+      max-width: 70%;
+    }
   }
 
   &__item-number {
