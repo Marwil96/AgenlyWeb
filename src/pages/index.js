@@ -42,8 +42,8 @@ const IndexPage = () => {
 
       <TextSection 
         modifier='right' 
-        img={section1Img} 
-        title={<span>I en evigt <span className='highlighted'>föränderligt</span>  måste din hemsidan ändras med den.</span>}
+        img={section1Img}
+        title={<span>Din hemsida måste kunna  <span className='highlighted'>förändras</span> med tidens gång.</span>}
         text={'Konkurransen för att bli sedd av kunder online har bara blivit hårdare. Vi hjälper dig bli sedd genom att optimera din SEO och arbeta iterativt med din hemsida genom A/B testning, och det utan att du behöver lyfta ett finger.'}
         // title={<span>In a forever <span className='highlighted'>changing</span> landscape, your website needs to change with it.</span>}
         // text={'The competition to be seen to the customers online has only grown fiercer. We help you to be seen by optimizing your SEO and working iteratively with your website through A/B testing. And that without you lifting a finger.'} 
