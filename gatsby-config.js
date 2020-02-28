@@ -3,10 +3,12 @@ module.exports = {
     title: `Build your own Website – Website Builder – Agenly`,
     description: `With Agenly you tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.`,
     author: `@Agenly`,
+    siteUrl: `https://agenly.site`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
