@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "flickity": "^2.2.1",
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.2.29",
@@ -18,6 +19,7 @@
     "gatsby-plugin-sitemap": "^2.2.27",
     "gatsby-plugin-typography": "^2.3.22",
     "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-source-prismic-graphql": "^3.5.0",
     "gatsby-transformer-sharp": "^2.3.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",

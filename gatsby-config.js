@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gratis Hemsida – Bygg din egna hemsida idag – Hemside Byggare – Agenly.se`,
@@ -27,6 +31,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-37970043-4",
+      },
+    },
+    {
+      resolve: "gatsby-source-prismic-graphql",
+      options: {
+        repositoryName: "agenly", // required
+        accessToken: `${process.env.GATSBY_PRISMIC_KEY}`, // optional
       },
     },
     {
