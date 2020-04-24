@@ -17,7 +17,7 @@ const Header = (props) => {
         <div className="Header__links">
           {/* <Link to='/why'>Why?</Link> */}
           <Link to="/pricing">Prissättning</Link>
-          <Link to="/why">Moduler</Link>
+          <Link to="/features">Funktioner</Link>
           <Link to="/why">Varför</Link>
           {/* <span>Newsletter</span> */}
           {/* <InputButton modifier={props.fixed ? null : 'primary'} small={true} /> */}

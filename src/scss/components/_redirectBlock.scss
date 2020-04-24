@@ -1,0 +1,23 @@
+.RedirectBlock {
+  @include mainContainer;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0;
+
+  &__title {
+    text-align: center;
+    max-width: 68rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 0rem;
+  }
+
+  &__subtitle {
+    text-align: center;
+    max-width: 68rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2.4rem;
+  }
+}

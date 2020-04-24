@@ -13,12 +13,12 @@ const Features = ({data}) => {
   console.log(featuresArray)
   return (
     <Layout>
-      <SEO title='Features' author='William Martinsson' />
+      <SEO title='Funktioner' author='William Martinsson' />
       <PageHeader title={featureIndex.title[0].text} text={<RichText render={featureIndex.subtitle} />} />
 
       <section className='Features'>
         {featuresArray.map(card => (
-          <FeatureCard title={card.node.card_title[0].text} subtitle={card.node.card_subtitle[0].text}/>
+          <FeatureCard title={card.node.card_title[0].text} subtitle={card.node.card_subtitle[0].text} isLinked={card.node.own_page} link={`features/${card.node._meta.uid}`}/>
         ))}
       </section>
 
@@ -37,6 +37,10 @@ export const query = graphql`
             card_subtitle
             title
             subtitle
+            own_page
+            _meta {
+              uid
+            }
           }
         }
       }

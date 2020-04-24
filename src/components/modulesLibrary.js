@@ -1,7 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image';
 
-const ModulesLibrary = (props) => {
+const ModulesLibrary = ({cards}) => {
   let imageArray = {}
   let modulesArray = [
     {
@@ -84,15 +85,15 @@ const ModulesLibrary = (props) => {
   return (
     <section className="ModulesLibrary">
       <div className="ModulesLibrary__container">
-        {modulesArray.map((item, index) => (
+        {cards.map((item, index) => (
           <div className="ModulesLibrary__item" key={index}>
             <img
               className="ModulesLibrary__image"
-              src={imageArray[item.image].url}
+              src={item.module_card_image.url}
               alt={item.title}
             />
-            <h3 className="ModulesLibrary__title">{item.title}</h3>
-            <span className="ModulesLibrary__text">{item.text}</span>
+            <h3 className="ModulesLibrary__title">{item.module_card_title[0].text}</h3>
+            <span className="ModulesLibrary__text">{item.module_card_subtitle[0].text}</span>
           </div>
         ))}
       </div>

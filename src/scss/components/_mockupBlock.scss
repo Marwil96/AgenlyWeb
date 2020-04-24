@@ -1,0 +1,17 @@
+.MockupBlock {
+  @include mainContainer;
+  justify-content: center;
+  padding-top: 0;
+
+  &__desktop { 
+    object-fit: contain;
+    width: 64%;
+    // width: calc(70 - 3.2rem);
+  }
+
+  &__mobile {
+    margin-right: 3.2rem;
+    object-fit: contain;
+    width: 30%
+  }
+}

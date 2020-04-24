@@ -1,0 +1,8 @@
+.TitleBlock {
+  @include mainContainer;
+  color: $color-oil;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  max-width: 68rem;
+}
