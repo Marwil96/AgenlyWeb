@@ -81,7 +81,34 @@
 
 
   
-  &__primary {
+   &__primary {
+    input {
+      background-color: $color-light-background;
+      color: $color-oil;
+      border: 1px solid $color-orange;
+
+      &::placeholder {
+        color: #6F6F6F;
+        // font-family: monospace;
+        // text-transform: uppercase;
+      }
+    }
+
+    button {
+      color: $color-white;
+      background-color: $color-orange;
+      border: 1px solid $color-orange;
+      font-weight: 600;
+
+      &.subscribed {
+        background: #40C390;
+        border: 1px solid #40C390;
+        color: white;
+      }
+    }
+  }
+  
+  &__green {
     input {
       background-color: $color-primary-green;
       color: $color-secondary-yellow;

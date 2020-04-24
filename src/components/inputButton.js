@@ -25,7 +25,7 @@ const InputButton = (props) => {
   return (
     <form className={props.modifier !== undefined ? `InputButton InputButton__${props.modifier}` : `InputButton`} onSubmit={handleSubmit}>
       <input type='email' placeholder='Din emailadress' onChange={inputHandler} value={emailValue} />
-      <button className={subscriptionState ? 'subscribed' : ''} onClick={handleSubmit}>{subscriptionState ? 'Tack!' : props.small ? 'Gå med' :'Gå med i nyhetsbrevet'}</button>
+      <button className={subscriptionState ? 'subscribed' : ''} onClick={handleSubmit}>{subscriptionState ? 'Tack!' : props.small ? 'Gå med' : props.text}</button>
     </form>
   )
 }

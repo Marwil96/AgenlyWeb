@@ -1,17 +1,62 @@
 .Button {
   width: fit-content;
   border-radius: 4px;
-  background-color: $color-secondary-yellow;
-  padding: 12px 20px;
+  background-color: $color-orange;
+  color: white;
+  padding: 1rem 1.6rem;
   border: none;
   outline: none;
   font-family: Inter;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: opacity 350ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    margin-left: 1rem;
+    width: 1.6rem;
+    margin-top: 0.2rem;
+  }
 
   &__primary {
+    background-color: $color-jungle;
+    color: $color-white;
+  }
+
+  &__outline {
+    background-color: initial;
+    border: 1px solid $color-orange;
+    color: $color-orange;
+  }
+
+  &__auto {
+    width: auto;
+  }
+  
+  &__grey {
+    background-color: $color-beige;
+    color: $color-oil;
+    
+    path {
+      fill: $color-oil;
+    }
+  }
+
+  &__grey-outline {
+    border: 1px solid $color-beige;
+    color: $color-beige;
+    background-color: initial;
+  }
+
+  &__yellow {
+    background-color: $color-secondary-yellow;
+    color: $color-oil;
+  }
+
+  &__jungle {
     background-color: $color-jungle;
     color: $color-white;
   }

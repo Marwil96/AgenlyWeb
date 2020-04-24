@@ -2,8 +2,8 @@
   display: flex;
   // position: sticky;
   top: 0;
-  background: $color-primary-green;
-  color: $color-secondary-yellow;
+  background: $color-light-background;
+  color: $color-oil;
   width: 100%;
   z-index: 1000;
   transition: background ease 450ms;
@@ -11,8 +11,9 @@
   &__logo {
     font-size: 20px;
     font-weight: 600;
+    flex: 0.3;
   }
-
+  
   &__container {
     display: flex;
     width: 100%;
@@ -20,8 +21,8 @@
     margin-bottom: unset;
     justify-content: space-between;
     align-items: center;
-    padding-top: 26px !important;
-    padding-bottom: 26px!important;
+    padding-top: 22px !important;
+    padding-bottom: 22px!important;
 
      @include respond(phone) {  
     padding-top: 16px!important;
@@ -36,11 +37,20 @@
   &__links {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 0.3;
 
     a {
-      font-size: 1.6rem;
+      font-size: 2rem;
       text-decoration: underline;
       transition: color ease 450ms;
+      color: $color-oil;
+      font-weight: 500;
+      margin-right: 2.4rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       &:hover {
         color: #E96E1F;
@@ -66,6 +76,20 @@
         border-radius: 4px;
         padding: 0 10px;
       }
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.3;
+
+    button {
+      margin-right: 1.6rem;
+
+      &:last-child {
+      margin-right: 0;
+    }
     }
   }
 

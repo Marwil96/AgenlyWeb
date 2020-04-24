@@ -1,0 +1,21 @@
+.ListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__checkbox {
+    width: 2rem;
+    height: 2rem;
+    background-color: $color-jungle;
+    margin-right: 1.2rem;
+    border-radius: 0.4rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+}

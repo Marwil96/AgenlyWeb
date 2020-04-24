@@ -6,8 +6,10 @@
 
 @import './components/actionBar';
 @import './components/button';
+@import './components/featureCard';
 @import './components/exampleSites';
 @import './components/header';
+@import './components/listItem';
 @import './components/introduction';
 @import './components/inputButton';
 @import './components/textSection';
@@ -16,7 +18,11 @@
 @import './components/foldout';
 @import './components/processSection';
 @import './components/modulesLibrary';
+@import './components/subscribePanel';
 @import './components/pageHeader';
+@import './components/pricingCard';
 
 @import './pages/index.scss';
+@import './pages/features';
 @import './pages/why';
+@import './pages/pricing';
