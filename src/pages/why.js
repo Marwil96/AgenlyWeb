@@ -6,6 +6,7 @@ import PageHeader from "../components/pageHeader"
 
 import "../scss/main.scss"
 import ActionBar from "../components/actionBar"
+import SubscribePanel from "../components/subscribePanel"
 
 const Why = () => (
   <Layout>
@@ -20,7 +21,7 @@ const Why = () => (
         When we have received data from various clients, we can start comparing the different sites made by us with each other and identify faster what works and what doesn't work. New clients can start on a foundation built with existing client's data. Which creates a loop of product-enhancement, that helps both new and existing clients.
       </span>
     </section>
-    <ActionBar />
+    <SubscribePanel />
   </Layout>
 )
 

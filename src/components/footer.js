@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import InputButton from "./inputButton"
 
 const Footer = () => {
   return (
@@ -22,9 +23,12 @@ const Footer = () => {
         <div className="Footer__column">
           {/* <span className="Footer__column-title">Links</span> */}
           <span className="Footer__column-title">Länkar</span>
-          <Link className="Footer__column-link" to="/modules"> 
+          <Link className="Footer__column-link" to="/pricing"> Prissättning </Link>
+          <Link className="Footer__column-link" to="/features/uppstart"> Uppstart </Link>
+          <Link className="Footer__column-link" to="/features/modules"> 
             Moduler
           </Link> 
+          <Link className="Footer__column-link" to="/features"> Funktioner </Link>
           <Link className="Footer__column-link" to="/why"> Varför </Link>
           {/* <Link className="Footer__column-link" to="/why"> Why </Link> */}
           {/* <span className="Footer__column-link">Uppdateringar</span> */}
@@ -42,8 +46,12 @@ const Footer = () => {
           </span>
         </div>
       </section>
+      <section className="Footer__container" style={{borderTop: 0}}>
+        <h3>Följ med på resan, skriv upp dig på nyhetsbrevet.</h3>
+        <InputButton text='Gå med' modifier={'primary'} />
+      </section>
       <span className="Footer__info">
-        {/* © Agenly 2020 · Villkor · Integritetspolicy · Cookies */}
+        @Agenly 2020 · <Link to='/legal/allmanna-villkor'>Villkor</Link> · <Link to='legal/integritetspolicy'>Integritetspolicy</Link> · <Link to='legal/kakor'>Cookies</Link>
         {/* Agenly 2020 */}
       </span>
     </footer>

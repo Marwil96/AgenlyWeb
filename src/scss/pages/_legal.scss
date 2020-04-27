@@ -1,0 +1,12 @@
+.Legal {
+  @include mainContainer;
+  flex-direction: column;
+
+  h3 {
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+  }
+  p {
+    margin-bottom: 0.8rem;
+  }
+}
