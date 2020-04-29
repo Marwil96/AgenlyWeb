@@ -10,6 +10,22 @@
 
      @include respond(phone) { 
       flex-direction: column;
+      align-items: flex-start;
+
+      .SubscribePanel__button-container {
+        width: 100%;
+        flex-direction: column;
+
+        .Button {
+          margin-right: 0;
+          width: auto;
+          padding: 1.2rem 1.2rem;
+
+          &:first-child {
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
     }
 
     &__title {

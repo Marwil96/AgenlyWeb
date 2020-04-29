@@ -12,6 +12,8 @@ const ExampleSites = () => {
 
   return (
     <section className="ExampleSites">
+      <h3 className='ExampleSites__title'>Exempel sidor</h3>
+      <div className='ExampleSites__container'>
       {sites.map((item, index) => (
         <div className="ExampleSites__item" key={index}>
           <a target='__blank' href={item.link}>
@@ -19,6 +21,7 @@ const ExampleSites = () => {
           </a>
         </div>
       ))}
+      </div>
     </section>
   )
 }

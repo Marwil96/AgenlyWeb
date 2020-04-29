@@ -65,7 +65,7 @@ const IndexPage = ({data}) => {
         text={'Det är därför vi har massvis med olika moduler att välja mellan. Allt från resturang menyer till medarbetar sektioner.'} 
         // text={'That’s why we have plenty of modules to choose from, everything from restaurant menus to employee sections.'} 
         button='Kolla in modulerna.'
-        link='/modules'
+        link='/features/moduler'
       />
 
       <ExampleSites />

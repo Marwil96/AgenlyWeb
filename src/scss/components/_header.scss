@@ -27,6 +27,7 @@
      @include respond(phone) {  
     padding-top: 16px!important;
     padding-bottom: 16px!important;
+    margin-bottom: 0;
 
     form {
       display: none;
@@ -39,6 +40,10 @@
     align-items: center;
     justify-content: center;
     flex: 0.3;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     a {
       font-size: 2rem;
@@ -82,7 +87,12 @@
   &__button-container {
     display: flex;
     justify-content: flex-end;
-    flex: 0.3;
+    // flex: 0.3;
+    align-self: flex-end;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     button {
       margin-right: 1.6rem;
@@ -107,6 +117,64 @@
       }
       to {
         top:0;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      background: none;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      svg {
+        width: 22px;
+
+        path {
+          fill: $color-oil;
+        }
+      }
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    &.open {
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: #f1f1f1;
+    }
+
+    &__mobile-links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-size: 2rem;
+      text-decoration: underline;
+      transition: color ease 450ms;
+      color: $color-oil;
+      font-weight: 500;
+      margin-right: 2.4rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: #E96E1F;
+      }
       }
     }
   }

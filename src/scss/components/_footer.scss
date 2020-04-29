@@ -19,6 +19,10 @@
 
     .InputButton {
       justify-content: flex-end;
+      
+      @include respond(phone) { 
+        margin-top: 1.6rem;
+      }
     }
 
     @include respond(phone) { 

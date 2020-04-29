@@ -4,12 +4,21 @@
   flex-direction: column;
   padding-top: 0;
 
+  @include respond(phone) {
+    align-items: flex-start;
+  }
+
   &__title {
     text-align: center;
     max-width: 68rem;
     font-size: 3.2rem;
     font-weight: 600;
     margin-bottom: 0rem;
+
+    @include respond(phone) {
+      font-size: 2.8rem;
+      text-align: left;
+    }
   }
 
   &__subtitle {
@@ -19,5 +28,23 @@
     font-weight: 500;
     line-height: 1.5;
     margin-bottom: 2.4rem;
+    
+    @include respond(phone) {
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  a {
+    @include respond(phone) { 
+      width: 100%;
+    }
+  }
+  .Button {
+    @include respond(phone) {
+      width: 100%;
+      padding: 1.4rem 0;
+    }
   }
 }

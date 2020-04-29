@@ -2,9 +2,26 @@
   @include mainContainer;
   justify-content: space-between;
   background: #F5EAE3;
+  flex-direction: column;
+  align-items: center;
+  
+
+  &__title {
+    margin-bottom: 1.6rem;
+    font-size: 3.2rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
 
   @include respond(over-max) {
     border-radius: 8px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__item {

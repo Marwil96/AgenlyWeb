@@ -11,6 +11,12 @@
   margin-right: 0.8rem;
   margin-left: 0.8rem;
   margin-bottom: 3.2rem;
+
+  @include respond(phone) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
   
   &:last-child {
     margin-right: 0;
