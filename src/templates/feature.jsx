@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import { graphql } from "gatsby";
 import { RichText } from 'prismic-reactjs';
 import Layout from "../components/layout"
@@ -12,13 +12,17 @@ import RedirectBlock from '../components/redirectBlock';
 
 const Feature = ({ data }) => {
   const featureData = data.prismic.allFeaturess.edges[0].node;
+  const [componentArray, setComponentArray] = useState([])
+  useEffect(() => {
+    setComponentArray(featureData.body)
+  }, [])
   console.log(featureData)
   return (
     <Layout>
       <SEO title='Feature' author='William Martinsson' />
       <PageHeader title={featureData.title[0].text} text={<RichText render={featureData.subtitle} />} />
       <section className='FeatureTemplate'> 
-        {featureData.body.map((component) => (
+        {componentArray.map((component) => (
           <div>
             {component.type === "module_cards" ? <ModulesLibrary cards={component.fields} /> : null}
             {component.type === "title_block" ? <TitleBlock title={component.primary.feature_title_block[0].text} />: null}
