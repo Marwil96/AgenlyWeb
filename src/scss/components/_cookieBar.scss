@@ -1,0 +1,35 @@
+.CookieBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $color-jungle;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000000;
+  
+  &__container {
+    @include mainContainer;
+    justify-content: space-between;
+    margin: 0;
+    padding-bottom: 2.4rem;
+    padding-top: 2.4rem;
+    width: 100%;
+    align-items: center;
+
+    span {
+      max-width: 80rem;
+      color: $color-white;
+
+      a {
+        border-bottom: 1px solid $color-white;
+      }
+    }
+    
+    button {
+      padding: 0.6rem 2.4rem;
+      height: 4rem;
+    }
+  }
+}

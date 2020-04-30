@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
 
 import Header from "./header"
+import CookieBar from './cookieBar'
 import "./layout.scss"
 import Footer from "./footer"
 
@@ -29,6 +30,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header fixed={headerState} />
+      <CookieBar />
       <div>
         <main>{children}</main>
       </div>
