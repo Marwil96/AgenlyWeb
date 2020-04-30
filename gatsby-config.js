@@ -39,12 +39,7 @@ module.exports = {
         environments: ["production", "development"],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-37970043-4",
-      },
-    },
+
     {
       resolve: "gatsby-source-prismic-graphql",
       options: {

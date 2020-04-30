@@ -13,8 +13,8 @@
     @include mainContainer;
     justify-content: space-between;
     margin: 0;
-    padding-bottom: 2.4rem;
-    padding-top: 2.4rem;
+    padding-bottom: 2.4rem !important;
+    padding-top: 2.4rem!important;
     width: 100%;
     align-items: center;
 
@@ -28,8 +28,13 @@
     }
     
     button {
-      padding: 0.6rem 2.4rem;
-      height: 4rem;
+      background: none;
+      border: none;
+      button {
+        padding: 0.6rem 2.4rem;
+        height: 4rem;
+        background-color: $color-orange;
+      }
     }
   }
 }

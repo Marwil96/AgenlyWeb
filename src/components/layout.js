@@ -9,8 +9,11 @@ import Footer from "./footer"
 const Layout = ({ children }) => {
   const [headerState, setHeaderFixed] = useState(false);
   const [windowY, setWindowY] = useState();
+  const [cookieAccepted, setCookieAccepted] = useState(false);
 
   useEffect(() => {
+    const cookieValue = document.cookie.split('=')[1];
+    cookieValue !== 'true' ? setCookieAccepted(false) : setCookieAccepted(true);
     window.addEventListener('scroll', (e) => {
       setWindowY(window.scrollY)
     });
@@ -27,10 +30,14 @@ const Layout = ({ children }) => {
 
   updateHeader(windowY)
 
+  const closeCookie = () => {
+    setCookieAccepted(true)
+  }
+
   return (
     <>
       <Header fixed={headerState} />
-      <CookieBar />
+      {cookieAccepted ? null : <CookieBar closeCookie={closeCookie}/>}
       <div>
         <main>{children}</main>
       </div>
