@@ -9,7 +9,7 @@ import Footer from "./footer"
 const Layout = ({ children }) => {
   const [headerState, setHeaderFixed] = useState(false);
   const [windowY, setWindowY] = useState();
-  const [cookieAccepted, setCookieAccepted] = useState(false);
+  const [cookieAccepted, setCookieAccepted] = useState(true);
 
   useEffect(() => {
     const cookieValue = document.cookie.split('=')[1];
