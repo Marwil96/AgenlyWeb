@@ -4,16 +4,13 @@ import { RichText } from 'prismic-reactjs';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeader from "../components/pageHeader"
-
 import "../scss/main.scss"
-import ActionBar from "../components/actionBar"
-import ModulesLibrary from "../components/modulesLibrary"
 import PricingCard from "../components/pricingCard"
 import SubscribePanel from "../components/subscribePanel"
 
 const Pricing = ({data}) => {
   const pricingData = data.prismic.allPricings.edges[0].node
-  console.log(pricingData)
+  
   return(
     <Layout>
       <SEO title='Moduler' author='William Martinsson' />
@@ -31,9 +28,6 @@ const Pricing = ({data}) => {
               list={card.fields}
               />
           ))}
-          {/* <PricingCard focus />
-          <PricingCard />
-          <PricingCard /> */}
         </div>
         <span>{pricingData.currency[0].text}</span>
       </section>

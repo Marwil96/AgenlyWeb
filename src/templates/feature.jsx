@@ -15,8 +15,8 @@ const Feature = ({ data }) => {
   const [componentArray, setComponentArray] = useState([])
   useEffect(() => {
     setComponentArray(featureData.body)
-  }, [])
-  console.log(featureData)
+  }, [featureData.body])
+
   return (
     <Layout>
       <SEO title='Feature' author='William Martinsson' />

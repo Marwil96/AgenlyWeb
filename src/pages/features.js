@@ -10,7 +10,7 @@ import FeatureCard from '../components/featureCard';
 const Features = ({data}) => {
   const featureIndex = data.prismic.allFeature_indexs.edges[0].node;
   const featuresArray = data.prismic.allFeaturess.edges;
-  console.log(featuresArray)
+
   return (
     <Layout>
       <SEO title='Funktioner' author='William Martinsson' />

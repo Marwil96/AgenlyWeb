@@ -3,6 +3,20 @@
     flex-direction: column;
     background:$color-jungle;
     align-items: center;
+    animation: slideUp ease 450ms;
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
 
     @include respond(over-max) {
       border-radius: 8px;

@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import React,{useState} from "react"
-import InputButton from "./inputButton"
 import Button from "./button"
 import MobileMenu from "./mobileMenu"
 
@@ -20,25 +19,27 @@ const Header = (props) => {
       }
     >
       <div className="Header__container">
+
         <div className="Header__logo">
           <Link to="/">Agenly</Link>
         </div>
+
         <div className="Header__links">
-          {/* <Link to='/why'>Why?</Link> */}
           <Link to="/pricing">{isEnglish ? 'Pricing' : 'Prissättning'}</Link>
           <Link to="/features">{isEnglish ? 'Features' : 'Funktioner'} </Link>
           <Link to="/why">{isEnglish ? 'Why' : 'Varför'}</Link>
-          {/* <span>Newsletter</span> */}
-          {/* <InputButton modifier={props.fixed ? null : 'primary'} small={true} /> */}
         </div>
+
         <div className="Header__button-container">
           <Button modifier="outline" text={isEnglish ? 'Login' : 'Logga in'} />
           <Button text={isEnglish ? 'Get started' : 'Kom igång'} arrow />
         </div>
+
         <button onClick={openMenuHelper} className='Header__hamburger'><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12">
           <path d="M0 12h18v-2H0v2zm0-5h18V5H0v2zm0-7v2h18V0H0z" fill="#000" />
         </svg></button>
       </div>
+      
       <MobileMenu menuState={menuState} isEnglish={isEnglish} />
     </header>
   )
