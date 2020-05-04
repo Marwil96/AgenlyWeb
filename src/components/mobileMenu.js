@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from "gatsby"
 import Button from "./button"
 
-const MobileMenu = ({menuState}) => {
+const MobileMenu = ({menuState, isEnglish}) => {
   return (
     <div className={`MobileMenu MobileMenu__${menuState ? 'open' : 'closed'}`}>
       <div className="MobileMenu__links">
-        <Link to="/pricing">Prissättning
+        <Link to="/pricing">{isEnglish ? 'Pricing' : 'Prissättning'}
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14">
             <path
               d="M0 7.62h12.67l-4.6 4.63 1.23 1.23L16 6.74 9.3 0 8.07 1.24l4.6 4.63H0v1.75z"
@@ -14,7 +14,7 @@ const MobileMenu = ({menuState}) => {
             />
           </svg>
         </Link>
-        <Link to="/features">Funktioner 
+        <Link to="/features">{isEnglish ? 'Features' : 'Funktioner'} 
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14">
           <path
             d="M0 7.62h12.67l-4.6 4.63 1.23 1.23L16 6.74 9.3 0 8.07 1.24l4.6 4.63H0v1.75z"
@@ -22,7 +22,7 @@ const MobileMenu = ({menuState}) => {
           />
           </svg>
         </Link>
-        <Link to="/why">Varför
+        <Link to="/why">{isEnglish ? 'Why' : 'Varför'}
           <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14">
             <path
               d="M0 7.62h12.67l-4.6 4.63 1.23 1.23L16 6.74 9.3 0 8.07 1.24l4.6 4.63H0v1.75z"
@@ -33,8 +33,8 @@ const MobileMenu = ({menuState}) => {
       </div>
 
       <div className="MobileMenu__button-container">
-        <Button modifier="outline" text="Logga in" />
-        <Button text="Kom igång" arrow />
+        <Button modifier="outline" text={isEnglish ? 'Login' : 'Logga in'} />
+        <Button text={isEnglish ? 'Get started' : 'Kom igång'} arrow />
       </div>
     </div>
   )
