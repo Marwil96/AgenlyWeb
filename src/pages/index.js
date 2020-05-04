@@ -33,8 +33,17 @@ const IndexPage = ({data}) => {
       <SEO title='Hem' description='Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.' author='William Martinsson' />
 
       <Introduction title={IndexData.homepage_title} subtitle={IndexData.homepage_subtitle} image={IndexData.homepage_imageSharp.childImageSharp.fluid} />
+      {IndexData.body.map(component => {
+        if (component.type === 'feature_panel') return <TextSection 
+          text={component.primary.panel_text} 
+          img={component.primary.panel_image.url} 
+          modifier={component.primary.panel_position ? 'right' : 'left'} 
+        />
 
-      <TextSection 
+        if (component.type === 'reasons_panel') return <TenReasons title={component.primary.title} reasons={component.fields} />
+        if (component.type === 'foldout_panel') return <ProcessSection title={component.primary.title} fields={component.fields} />
+      })}
+      {/* <TextSection 
         loaded={loaded}
         modifier='left' 
         img={setupIMG} 
@@ -66,7 +75,7 @@ const IndexPage = ({data}) => {
         // text={'That’s why we have plenty of modules to choose from, everything from restaurant menus to employee sections.'} 
         button='Kolla in modulerna.'
         link='/features/moduler'
-      />
+      /> */}
 
       <ExampleSites />
       <SubscribePanel />
@@ -115,6 +124,10 @@ export const query = graphql`
                      ... on PRISMIC_HomepageBodyReasons_panel {
                        type
                        label
+                       fields {
+                          block_text
+                          block_title
+                        }
                        primary {
                          title
                        }
@@ -122,6 +135,14 @@ export const query = graphql`
                      ... on PRISMIC_HomepageBodyFoldout_panel {
                        type
                        label
+                       fields {
+                        foldout_text
+                        foldout_title
+                      }
+                      primary {
+                        image
+                        title
+                      }
                      }
                    }
                  }

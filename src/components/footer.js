@@ -51,7 +51,7 @@ const Footer = () => {
         <InputButton text='Gå med' modifier={'primary'} />
       </section>
       <span className="Footer__info">
-        @Agenly 2020 · <Link to='/legal/allmanna-villkor'>Villkor</Link> · <Link to='legal/integritetspolicy'>Integritetspolicy</Link> · <Link to='legal/kakor'>Cookies</Link>
+        @Agenly 2020 · <Link to='/legal/allmanna-villkor'>Villkor</Link> · <Link to='/legal/integritetspolicy'>Integritetspolicy</Link> · <Link to='/legal/kakor'>Cookies</Link>
         {/* Agenly 2020 */}
       </span>
     </footer>

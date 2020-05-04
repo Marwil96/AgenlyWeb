@@ -6,7 +6,10 @@ import Button from './button';
 const CookieBar = ({closeCookie}) => {
   const addCookie = () => {
     console.log('ADD COOKIE')
-    document.cookie = "gatsby-gdpr-google-analytics=true"
+    let date = new Date();
+    date.setMonth(date.getMonth() + 12);
+
+    document.cookie = `gatsby-gdpr-google-analytics=true; expires=${date}`
     ReactGA.initialize("UA-37970043-4");
     closeCookie()
   }

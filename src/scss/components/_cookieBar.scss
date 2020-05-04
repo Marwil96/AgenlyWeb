@@ -8,6 +8,18 @@
   display: flex;
   justify-content: center;
   z-index: 1000000;
+  animation: slideUp ease 450ms;
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
   &__container {
     @include mainContainer;
@@ -18,9 +30,19 @@
     width: 100%;
     align-items: center;
 
+    @include respond(phone) {
+      margin-bottom: 0;
+    }
+
     span {
       max-width: 80rem;
       color: $color-white;
+
+      @include respond(phone) { 
+        font-size: 1.4rem;
+        max-width: none;
+        margin-right: 1.6rem;
+      }
 
       a {
         border-bottom: 1px solid $color-white;

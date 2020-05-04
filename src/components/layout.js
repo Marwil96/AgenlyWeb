@@ -12,8 +12,10 @@ const Layout = ({ children }) => {
   const [cookieAccepted, setCookieAccepted] = useState(true);
 
   useEffect(() => {
-    const cookieValue = document.cookie.split('=')[1];
-    cookieValue !== 'true' ? setCookieAccepted(false) : setCookieAccepted(true);
+    const cookieArray = document.cookie.split(';');
+    const cookieValue = cookieArray !== null ? cookieArray.filter((cookie) => cookie === 'gatsby-gdpr-google-analytics=true') : false
+  
+    cookieValue[0] !== 'gatsby-gdpr-google-analytics=true' ? setCookieAccepted(false) : setCookieAccepted(true);
     window.addEventListener('scroll', (e) => {
       setWindowY(window.scrollY)
     });
