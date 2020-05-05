@@ -13,7 +13,7 @@ const Features = ({data}) => {
 
   return (
     <Layout>
-      <SEO title='Funktioner' author='William Martinsson' />
+      <SEO title={featureIndex.seo_title} description={featureIndex.seo_description} author='William Martinsson' />
       <PageHeader title={featureIndex.title[0].text} text={<RichText render={featureIndex.subtitle} />} />
 
       <section className='Features'>
@@ -47,6 +47,8 @@ export const query = graphql`
       allFeature_indexs(lang: "sv-se") {
         edges {
           node {
+            seo_description
+            seo_title
             title
             subtitle
           }

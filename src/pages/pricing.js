@@ -13,7 +13,7 @@ const Pricing = ({data}) => {
   
   return(
     <Layout>
-      <SEO title='Moduler' author='William Martinsson' />
+      <SEO title={pricingData.title[0].text} description={RichText.asText(pricingData.subtitle)} author='William Martinsson' />
       <PageHeader title={pricingData.title[0].text} text={<RichText render={pricingData.subtitle} />} />
 
       <section className='Pricing'>

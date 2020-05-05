@@ -19,7 +19,7 @@ const Feature = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title='Feature' author='William Martinsson' />
+      <SEO title={featureData.seo_title} description={featureData.seo_description} author='William Martinsson' />
       <PageHeader title={featureData.title[0].text} text={<RichText render={featureData.subtitle} />} />
       <section className='FeatureTemplate'> 
         {componentArray.map((component) => (
@@ -42,6 +42,8 @@ export const query = graphql`
       allFeaturess(lang: "sv-se", uid: $uid) {
         edges {
           node {
+            seo_title
+            seo_description
             card_title
             card_subtitle
             title

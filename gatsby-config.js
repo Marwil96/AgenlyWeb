@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gratis Hemsida – Bygg din egna hemsida idag – Hemside Byggare – Agenly.se`,
+    title: `Agenly`,
     description: `Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.`,
     author: `@Agenly`,
     siteUrl: `https://agenly.se`,

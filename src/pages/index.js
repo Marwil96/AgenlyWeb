@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title='Hem' description='Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.' author='William Martinsson' />
+      <SEO title={IndexData.seo_title} description={IndexData.seo_description} author='William Martinsson' />
 
       <Introduction title={IndexData.homepage_title} subtitle={IndexData.homepage_subtitle} image={IndexData.homepage_imageSharp.childImageSharp.fluid} />
       {IndexData.body.map(component => {
@@ -43,6 +43,8 @@ export const query = graphql`
              allHomepages(lang: "sv-se") {
                edges {
                  node {
+                   seo_title
+                   seo_description 
                    homepage_subtitle
                    homepage_title
                    homepage_image
