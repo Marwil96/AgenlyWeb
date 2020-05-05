@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="Footer__column">
           <span className="Footer__column-title">Agenly</span>
           <span className="Footer__column-text">
-            {isEnglish ? 'Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.' : "You tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best solution for you."}
+            {isEnglish ? "You tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best solution for you." : 'Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.'}
           </span>
         </div>
       </section>
