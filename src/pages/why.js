@@ -26,7 +26,7 @@ const Why = ({ data }) => {
 export const query = graphql`
   {
     prismic {
-      allWhys {
+      allWhys(lang: "sv-se") {
         edges {
           node {
             seo_title
