@@ -13,7 +13,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
-    'gatsby-plugin-simple-analytics',
+    {
+      resolve: "simple-analytics-gatsby-plugin",
+      options: {
+        trackPageViews: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
