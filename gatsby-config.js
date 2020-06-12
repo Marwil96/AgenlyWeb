@@ -14,7 +14,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: "simple-analytics-gatsby-plugin",
+      resolve: "gatsby-plugin-simple-analytics",
       options: {
         trackPageViews: true,
       },
