@@ -46,6 +46,11 @@
     max-width: 28.8rem;
   }
 
+  &__button {
+    width: 100%;
+    display: flex;
+  }
+
   &__price {
     font-size: 2.4rem;
     font-weight: 700;

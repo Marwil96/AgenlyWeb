@@ -19,7 +19,7 @@ const PricingCard = ({focus, price, unit, title, subtitle, list}) => {
           <span className='PricingCard__price'>{price[0].text}</span>
           <span className='PricingCard__unit'>{unit[0].text}</span>
         </div>
-        <Button modifier='auto' text='Kom igång' arrow />
+        <a className='PricingCard__button' href='https://app.agenly.se/createAccount'><Button modifier='full-width' text='Kom igång' arrow /></a>
       </div>
     </div>
   )

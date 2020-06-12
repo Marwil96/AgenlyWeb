@@ -25,7 +25,7 @@ const Footer = () => {
           <span className="Footer__column-title">{isEnglish ? 'Links' : 'Länkar'}</span>
           <Link className="Footer__column-link" to="/pricing"> {isEnglish ? 'Pricing' : 'Prissättning'} </Link>
           <Link className="Footer__column-link" to="/features/uppstart"> {isEnglish ? 'Setup Process' : 'Uppstart'} </Link>
-          <Link className="Footer__column-link" to="/features/modules"> 
+          <Link className="Footer__column-link" to="/features/moduler"> 
             {isEnglish ? 'Modules' : 'Moduler'}
           </Link> 
           <Link className="Footer__column-link" to="/features"> {isEnglish ? 'Features' : 'Funktioner'} </Link>

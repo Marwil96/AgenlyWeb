@@ -31,13 +31,15 @@ const Header = (props) => {
         </div>
 
         <div className="Header__button-container">
-          <Button modifier="outline" text={isEnglish ? 'Login' : 'Logga in'} />
-          <Button text={isEnglish ? 'Get started' : 'Kom igång'} arrow />
+          <a href='https://app.agenly.se'><Button modifier="outline" text={isEnglish ? 'Login' : 'Logga in'} /></a>
+          <a href='https://app.agenly.se/createAccount'><Button text={isEnglish ? 'Get started' : 'Kom igång'} arrow /></a>
         </div>
 
-        <button onClick={openMenuHelper} className='Header__hamburger'><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12">
-          <path d="M0 12h18v-2H0v2zm0-5h18V5H0v2zm0-7v2h18V0H0z" fill="#000" />
-        </svg></button>
+        <button onClick={openMenuHelper} className='Header__hamburger'>
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12">
+            <path d="M0 12h18v-2H0v2zm0-5h18V5H0v2zm0-7v2h18V0H0z" fill="#000" />
+          </svg>
+        </button>
       </div>
       
       <MobileMenu menuState={menuState} isEnglish={isEnglish} />
