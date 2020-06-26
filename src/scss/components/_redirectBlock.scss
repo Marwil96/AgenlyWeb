@@ -27,12 +27,12 @@
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.5;
-    margin-bottom: 2.4rem;
+    // margin-bottom: 2.4rem;
     
     @include respond(phone) {
       font-size: 2rem;
       text-align: left;
-      margin-bottom: 1.6rem;
+      // margin-bottom: 1.6rem;
     }
   }
 
@@ -42,9 +42,11 @@
     }
   }
   .Button {
+    margin-top: 2.4rem;
     @include respond(phone) {
       width: 100%;
       padding: 1.4rem 0;
+      margin-top: 1.6rem;
     }
   }
 }
