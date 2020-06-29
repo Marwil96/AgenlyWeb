@@ -41,7 +41,7 @@ const Footer = () => {
       </section>
       <section className="Footer__container" style={{borderTop: 0}}>
         <h3>{isEnglish ? 'Be a part of the ride, sign up for the newsletter.' : 'Följ med på resan, skriv upp dig på nyhetsbrevet.'}</h3>
-        <InputButton text='Subscribe for newsletter' modifier={'primary'} />
+        <InputButton text={isEnglish ? 'Subscribe for newsletter' : 'Gå med i nyhetsbrevet'} modifier={'primary'} />
       </section>
       <span className="Footer__info">
         @Agenly 2020 · <Link to='/legal/allmanna-villkor'>Villkor</Link> · <Link to='/legal/integritetspolicy'>Integritetspolicy</Link> · <Link to='/legal/kakor'>Cookies</Link>
