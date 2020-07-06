@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './button';
 import ListItem from './listItem';
 
-const PricingCard = ({focus, price, unit, title, subtitle, list}) => {
+const PricingCard = ({focus, price, unit, title, subtitle, list, english}) => {
   return (
     <div className={`PricingCard ${focus ? 'PricingCard__focus' : ''}`}>
       <div className='PricingCard__container'>
@@ -19,7 +19,7 @@ const PricingCard = ({focus, price, unit, title, subtitle, list}) => {
           <span className='PricingCard__price'>{price[0].text}</span>
           <span className='PricingCard__unit'>{unit[0].text}</span>
         </div>
-        <a className='PricingCard__button' href='https://app.agenly.se/createAccount'><Button modifier='full-width' text='Kom igång' arrow /></a>
+        <a className='PricingCard__button' href='https://app.agenly.se/createAccount'><Button modifier='full-width' text={english ? 'Get started' : 'Kom igång'} arrow /></a>
       </div>
     </div>
   )

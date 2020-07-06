@@ -6,10 +6,12 @@ import CookieBar from './cookieBar'
 import "./layout.scss"
 import Footer from "./footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, english }) => {
   const [headerState, setHeaderFixed] = useState(false);
   const [windowY, setWindowY] = useState();
   const [cookieAccepted, setCookieAccepted] = useState(true);
+
+  english = english === 'en' ? true : false;
 
   useEffect(() => {
     const cookieArray = document.cookie.split(';');
@@ -35,15 +37,14 @@ const Layout = ({ children }) => {
   const closeCookie = () => {
     setCookieAccepted(true)
   }
-
   return (
     <>
-      <Header fixed={headerState} />
-      {cookieAccepted ? null : <CookieBar closeCookie={closeCookie}/>}
+      <Header fixed={headerState} english={english} />
+      {cookieAccepted ? null : <CookieBar closeCookie={closeCookie} />}
       <div>
         <main>{children}</main>
       </div>
-      <Footer />
+      <Footer english={english} />
     </>
   )
 }

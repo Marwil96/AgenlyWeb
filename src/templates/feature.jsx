@@ -41,7 +41,7 @@ const Feature = ({ data }) => {
 export const query = graphql`
   query PostBySlug($uid: String!) {
     prismic {
-      allFeaturess(lang: "sv-se", uid: $uid) {
+      allFeaturess(uid: $uid) {
         edges {
           node {
             seo_title

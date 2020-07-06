@@ -8,11 +8,23 @@ module.exports = {
     description: `Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.`,
     author: `@Agenly`,
     siteUrl: `https://agenly.se`,
+    langs: ["en", "sv"],
+    defaultLangKey: "sv",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "sv",
+        langs: ["en", "sv"],
+        useLangKeyLayout: false,
+        prefixDefault: false,
+        langKeyForNull: "any",
+      },
+    },
     {
       resolve: "gatsby-plugin-simple-analytics",
       options: {

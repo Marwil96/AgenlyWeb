@@ -1,18 +1,18 @@
 import React from 'react';
 import fik from "../images/logos/fik.png"
-import pizzeria from "../images/logos/pizzeria.png"
+import ffss from "../images/logos/FFSS.png"
 import scifi from "../images/logos/scifi.png"
 
-const ExampleSites = () => {
+const ExampleSites = ({english}) => {
   const sites = [
     { image: fik, link: "https://gildas-186c8uw4p.now.sh/" },
-    { image: pizzeria, link: "https://gildas-186c8uw4p.now.sh/" },
-    { image: scifi, link: "https://sciencefiction.pw/" },
+    { image: ffss, link: "https://agenly.website/" },
+    { image: scifi, link: "https://sciencefictionforeningen.agenly.se/" },
   ]
 
   return (
     <section className="ExampleSites">
-      <h3 className='ExampleSites__title'>Exempel sidor</h3>
+      <h3 className='ExampleSites__title'>{english ? 'Example websites' : 'Exempel sidor'}</h3>
       <div className='ExampleSites__container'>
       {sites.map((item, index) => (
         <div className="ExampleSites__item" key={index}>

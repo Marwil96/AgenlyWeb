@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import addToMailchimp from "gatsby-plugin-mailchimp"
 
-const SignupButton = ({modifier, text}) => {
+const SignupButton = ({modifier, text, english}) => {
   const [emailValue, setEmailValue] = useState("")
 
   const handleSubmit = async e => {
@@ -9,9 +8,9 @@ const SignupButton = ({modifier, text}) => {
     window.location.href = `https://app.agenly.se/createAccount?${emailValue}`
   }
 
-  const inputHandler = e => {
-    setEmailValue(e.target.value)
-  }
+  // const inputHandler = e => {
+  //   setEmailValue(e.target.value)
+  // }
 
   return (
     <form
@@ -24,7 +23,7 @@ const SignupButton = ({modifier, text}) => {
     >
       <input
         type="email"
-        placeholder="Din emailadress"
+        placeholder={english ? 'Your emailaddress' : "Din emailadress"}
         onChange={e => setEmailValue(e.target.value)}
         value={emailValue}
       />

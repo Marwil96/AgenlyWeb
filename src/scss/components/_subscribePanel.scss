@@ -29,6 +29,9 @@
       .SubscribePanel__button-container {
         width: 100%;
         flex-direction: column;
+        a {
+          margin-right: 0;
+        }
 
         .Button {
           margin-right: 0;
@@ -68,13 +71,14 @@
       display: flex;
       justify-content: center;
       flex: 0.3;
-
-      button {
-        margin-right: 1.6rem;
+      
+      a {
+        display: grid;
+         margin-right: 1.4rem;
 
         &:last-child {
         margin-right: 0;
       }
-    }
+      } 
   }
 }

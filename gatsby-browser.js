@@ -7,3 +7,12 @@
 // You can delete this file if you're not using it
 
 require('typeface-inter')
+
+exports.onRouteUpdate = () =>  {
+  const userLang = navigator.language.substr(0, 2)
+  console.log(userLang, window)
+
+  if (userLang !== "sv" && !window.location.pathname.startsWith("/en")) {
+    window.location.pathname = `/en${window.location.pathname}`
+  }
+}

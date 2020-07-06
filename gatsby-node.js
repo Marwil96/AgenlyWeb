@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const pages = await graphql(`
   {
     prismic {
-      allFeaturess(lang: "sv-se") {
+      allFeaturess {
         edges {
           node {
             card_title
@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
             subtitle
             _meta {
               uid
+              lang
             }
           }
         }
@@ -40,6 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   }`)
   const template = path.resolve("src/templates/feature.jsx")
+  const template_feature_english = path.resolve("src/templates/feature.en.jsx")
   const legalTemplate = path.resolve("src/templates/legal.jsx")
 
   pages.data.prismic.allLegals.edges.forEach(edge => {
@@ -56,6 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
   )
 
   pages.data.prismic.allFeaturess.edges.forEach(edge => {
+    if(edge.node._meta.lang === 'sv-se') {
     createPage({
       path: `/features/${edge.node._meta.uid}`,
       component: template,
@@ -63,6 +66,15 @@ exports.createPages = async ({ graphql, actions }) => {
         uid: edge.node._meta.uid,
       },
     })
+    } else {
+      createPage({
+      path: `/en/features/${edge.node._meta.uid}`,
+      component: template_feature_english,
+      context: {
+        uid: edge.node._meta.uid,
+      },
+    })
+    }
   }
 )}
 
