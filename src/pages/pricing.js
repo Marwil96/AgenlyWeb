@@ -33,6 +33,7 @@ const Pricing = ({ data }) => {
               title={card.primary.card_title}
               subtitle={card.primary.card_subtitle}
               list={card.fields}
+              helperText={card.primary.card_helper_text}
             />
           ))}
         </div>

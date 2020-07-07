@@ -53,9 +53,14 @@
 
   &__price {
     font-size: 2.4rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     margin-bottom: 0.6rem;
+  }
+
+  &__helper-text {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
   }
 
   &__list {
