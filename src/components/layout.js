@@ -15,9 +15,11 @@ const Layout = ({ children, english }) => {
 
   useEffect(() => {
     const cookieArray = document.cookie.split(';');
-    const cookieValue = cookieArray !== null ? cookieArray.filter((cookie) => cookie === ' gatsby-gdpr-google-analytics=true') : false
-  
-    cookieValue[0] !== 'gatsby-gdpr-google-analytics=true' ? setCookieAccepted(false) : setCookieAccepted(true);
+    const cookieValue = cookieArray !== null ? cookieArray.filter((cookie) => cookie === ' gatsby-gdpr-google-analytics=true' || cookier === 'gatsby-gdpr-google-analytics=true') : false
+    console.log(cookieArray, cookieValue)
+    cookieValue[0] !== " gatsby-gdpr-google-analytics=true" || cookieValue[0] !== "gatsby-gdpr-google-analytics=true"
+      ? setCookieAccepted(false)
+      : setCookieAccepted(true)
     window.addEventListener('scroll', (e) => {
       setWindowY(window.scrollY)
     });
