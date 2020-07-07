@@ -15,7 +15,7 @@ const Layout = ({ children, english }) => {
 
   useEffect(() => {
     const cookieArray = document.cookie.split(';');
-    const cookieValue = cookieArray !== null ? cookieArray.filter((cookie) => cookie === 'gatsby-gdpr-google-analytics=true') : false
+    const cookieValue = cookieArray !== null ? cookieArray.filter((cookie) => cookie === ' gatsby-gdpr-google-analytics=true') : false
   
     cookieValue[0] !== 'gatsby-gdpr-google-analytics=true' ? setCookieAccepted(false) : setCookieAccepted(true);
     window.addEventListener('scroll', (e) => {
