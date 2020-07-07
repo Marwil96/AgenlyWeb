@@ -23,8 +23,8 @@ const Footer = ({english}) => {
         <div className="Footer__column">
           <span className="Footer__column-title">{english ? 'Links' : 'Länkar'}</span>
           <Link className="Footer__column-link" to={`/${english ? 'en/' : ''}pricing`}> {english ? 'Pricing' : 'Prissättning'} </Link>
-          <Link className="Footer__column-link" to={`/${english ? 'en/' : ''}features/uppstart`}> {english ? 'Setup' : 'Uppstart'} </Link>
-          <Link className="Footer__column-link" to={`/${english ? 'en/' : ''}features/moduler`}> 
+          <Link className="Footer__column-link" to={english ? `/en/features/unique-startup-process` : '/features/uppstart'}> {english ? 'Setup' : 'Uppstart'} </Link>
+          <Link className="Footer__column-link" to={english ? `/en/features/modules` : '/features/moduler'}> 
             {english ? 'Modules' : 'Moduler'}
           </Link> 
           <Link className="Footer__column-link" to={`/${english ? 'en/' : ''}features`}> {english ? 'Features' : 'Funktioner'} </Link>
