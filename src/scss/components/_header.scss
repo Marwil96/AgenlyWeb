@@ -87,7 +87,7 @@
   &__button-container {
     display: flex;
     justify-content: flex-end;
-    // flex: 0.3;
+    flex: 0.3;
     align-self: flex-end;
 
     @include respond(phone) {
