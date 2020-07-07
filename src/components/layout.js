@@ -17,7 +17,7 @@ const Layout = ({ children, english }) => {
     const cookieArray = document.cookie.split(';');
     const cookieValue = cookieArray !== null ? cookieArray.filter((cookie) => cookie === ' gatsby-gdpr-google-analytics=true' || cookie === 'gatsby-gdpr-google-analytics=true') : false
     console.log(cookieArray, cookieValue)
-    cookieValue[0] !== " gatsby-gdpr-google-analytics=true" || cookieValue[0] !== "gatsby-gdpr-google-analytics=true"
+    cookieValue[0] !== " gatsby-gdpr-google-analytics=true" && cookieValue[0] !== "gatsby-gdpr-google-analytics=true"
       ? setCookieAccepted(false)
       : setCookieAccepted(true)
     window.addEventListener('scroll', (e) => {
