@@ -1,8 +1,8 @@
 import React from 'react';
 import Flickity from 'react-flickity-component'
 
-const TenReasons = () => {
-  // Svenska
+const TenReasons = ({title, reasons}) => {
+  // Swedish
   // const reasons = [
   //   { title: 'Testa och betala sen.', text:'Testa och kör, vi tar inte pengar för första månaden. Finns det någon webbyrå i världen som har det erbjudandet?'},
   //   { title: 'Pressade priser.', text: 'Genom vår automatisering av hemsidebyggandet kan vi erbjuda prispressade hemsidor som även har blivit hårt testade.' },
@@ -11,13 +11,14 @@ const TenReasons = () => {
   //   { title: 'Idiotsäker. ', text: 'Vi kräver inte att du har någon designkunskap. Det enda du behöver göra är att svara på några enkla frågor.' }
   // ]
 
-  const reasons = [
-    { title: 'Try it first.', text: 'We do not take money for the first two weeks. Try it! Is there any web agency in the world that has that offer?' },
-    { title: 'Dirt Cheap Prices.', text: 'Through our automation of website building, we can offer cheap websites that have been heavily tested.' },
-    { title: "Don't lift a finger.", text: 'We are constantly on the cutting edge of technology. To provide a good experience for your customers.' },
-    { title: 'You own the website.', text: "If you want to cancel Agenly's subscription, you can request the codebase.No other website builder in the market offers this." },
-    { title: 'Custom Domain.. ', text: 'We take care of everything. Buy your domain and host your website with us.' }
-  ]
+  // English
+  // const reasons = [
+  //   { title: 'Try it first.', text: 'We do not take money for the first two weeks. Try it! Is there any web agency in the world that has that offer?' },
+  //   { title: 'Dirt Cheap Prices.', text: 'Through our automation of website building, we can offer cheap websites that have been heavily tested.' },
+  //   { title: "Don't lift a finger.", text: 'We are constantly on the cutting edge of technology. To provide a good experience for your customers.' },
+  //   { title: 'You own the website.', text: "If you want to cancel Agenly's subscription, you can request the codebase.No other website builder in the market offers this." },
+  //   { title: 'Custom Domain.. ', text: 'We take care of everything. Buy your domain and host your website with us.' }
+  // ]
 
   const flickityOptions = {
     freeScroll: true,
@@ -29,8 +30,7 @@ const TenReasons = () => {
 
   return (
     <section className="TenReasons">
-      {/* <h3 className="TenReasons__title">Fem anledningar varför du ska köra med Agenly.</h3> */}
-      <h3 className="TenReasons__title">Why Agenly.</h3>
+      <h3 className="TenReasons__title">{title[0].text}</h3>
 
       <div className="TenReasons__item-container">
       <Flickity
@@ -41,11 +41,11 @@ const TenReasons = () => {
         reloadOnUpdate // default false
         static // default false
       >
-        {reasons.map((item, index) => (
+        {reasons.map((reason, index) => (
           <div className="TenReasons__item" key={index}>
             <span className="TenReasons__item-number">{index + 1}.</span>
-            <h5 className="TenReasons__item-title">{item.title}</h5>
-            <span className="TenReasons__item-text">{item.text}</span>
+            <h5 className="TenReasons__item-title">{reason.block_title[0].text}</h5>
+            <span className="TenReasons__item-text">{reason.block_text[0].text}</span>
           </div>
         ))}
       </Flickity>

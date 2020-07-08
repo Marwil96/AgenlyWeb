@@ -1,0 +1,16 @@
+.ImageBlock {
+  @include mainContainer;
+  justify-content: center;
+  padding-top: 0;
+
+  &__image { 
+    object-fit: contain;
+    width: 100%;
+    border-radius: 8px;
+
+    @include respond(phone) {
+      border-radius: 4px;
+    }
+    // width: calc(70 - 3.2rem);
+  }
+}

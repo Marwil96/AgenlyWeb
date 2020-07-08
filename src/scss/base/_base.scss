@@ -28,7 +28,7 @@ html {
   }
 
   @include respond(big-desktop) {
-    font-size: 75%; //1 rem = 10px; 12/16 = 75%
+    font-size: 65.5%; //1 rem = 10px; 12/16 = 75%
   }
 
   max-width: 100%;

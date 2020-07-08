@@ -1,0 +1,90 @@
+.PricingCard {
+  min-width: 26rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $color-gray;
+  border: 0.5px solid $color-oil;
+  color: $color-oil;
+  padding: 3.2rem 1.6rem;
+  margin-right: 0.8rem;
+  margin-left: 0.8rem;
+  margin-bottom: 3.2rem;
+
+  @include respond(phone) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  &:last-child {
+    margin-right: 0;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+    line-height: 1.3;
+    max-width: 28.8rem;
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+  }
+
+  &__price {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+
+  &__helper-text {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+  }
+
+  &__list {
+    margin-bottom: 3.2rem;
+  }
+
+  &__price-container {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+  }
+
+  &__unit {
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+
+  &__focus {
+    background-color: $color-jungle;
+    border: 1px solid $color-oil;
+    color: $color-white;
+
+    .ListItem__checkbox {
+      background-color: #40C390;
+    }
+  }
+}

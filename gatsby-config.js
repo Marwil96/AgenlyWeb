@@ -1,14 +1,36 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Build your own Website – Website Builder – Agenly`,
-    description: `With Agenly you tell us about your business and we handle the rest. We use a combination between conversational UI and AI to create the best website for you.`,
+    title: `Agenly`,
+    description: `Du berättar för oss om ditt företag och vi tar hand om resten. Vi använder en kombination av konversationell UI och Ai för att skapa bästa lösningen för dig.`,
     author: `@Agenly`,
-    siteUrl: `https://agenly.site`,
+    siteUrl: `https://agenly.se`,
+    langs: ["en", "sv"],
+    defaultLangKey: "sv",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "sv",
+        langs: ["en", "sv"],
+        useLangKeyLayout: false,
+        prefixDefault: false,
+        langKeyForNull: "any",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-simple-analytics",
+      options: {
+        trackPageViews: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,9 +46,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        trackingId: "UA-37970043-3",
+        googleAnalytics: {
+          trackingId: "UA-37970043-4", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-analytics", // default
+          anonymize: true, // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production", "development"],
+      },
+    },
+
+    {
+      resolve: "gatsby-source-prismic-graphql",
+      options: {
+        repositoryName: "agenly", // required
+        accessToken: `${process.env.GATSBY_PRISMIC_KEY}`, // optional
       },
     },
     {

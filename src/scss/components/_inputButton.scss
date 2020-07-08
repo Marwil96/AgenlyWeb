@@ -13,7 +13,7 @@
     border-radius: 4px;
     margin-right: 8px;
     border: 1px solid $color-oil;
-    padding-left: 16px;
+    padding-left: 1.6rem;
     font-size: 1.6rem;
     color: $color-oil;
     flex: 0.6;
@@ -30,7 +30,7 @@
 
   button {
     height: 100%;
-    padding: 0 16px;
+    padding: 0 1.6rem;
     // border-radius: 0 6px 6px 0;
     border-radius: 4px;
     border: 1px solid #32757B;
@@ -64,7 +64,7 @@
       width: auto;
       border-right: 1px solid #333;
       border-radius: 4px;
-      padding: 16px;
+      padding: 1.6rem;
       margin-bottom: 8px;
       max-width: initial;
       margin-right: 0px;
@@ -74,14 +74,41 @@
       width: auto;
       border-left: 1px solid #32757B;
       border-radius: 4px;
-      padding: 16px;
+      padding: 1.6rem;
       cursor: pointer;
     }
   }
 
 
   
-  &__primary {
+   &__primary {
+    input {
+      background-color: $color-light-background;
+      color: $color-oil;
+      border: 1px solid $color-orange;
+
+      &::placeholder {
+        color: #6F6F6F;
+        // font-family: monospace;
+        // text-transform: uppercase;
+      }
+    }
+
+    button {
+      color: $color-white;
+      background-color: $color-orange;
+      border: 1px solid $color-orange;
+      font-weight: 600;
+
+      &.subscribed {
+        background: #40C390;
+        border: 1px solid #40C390;
+        color: white;
+      }
+    }
+  }
+  
+  &__green {
     input {
       background-color: $color-primary-green;
       color: $color-secondary-yellow;

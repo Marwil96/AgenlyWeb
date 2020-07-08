@@ -2,14 +2,24 @@ import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
 
 import Header from "./header"
+import CookieBar from './cookieBar'
 import "./layout.scss"
 import Footer from "./footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, english }) => {
   const [headerState, setHeaderFixed] = useState(false);
   const [windowY, setWindowY] = useState();
+  const [cookieAccepted, setCookieAccepted] = useState(true);
+
+  english = english === 'en' ? true : false;
 
   useEffect(() => {
+    const cookieArray = document.cookie.split(';');
+    const cookieValue = cookieArray !== null ? cookieArray.filter((cookie) => cookie === ' gatsby-gdpr-google-analytics=true' || cookie === 'gatsby-gdpr-google-analytics=true') : false
+    console.log(cookieArray, cookieValue)
+    cookieValue[0] !== " gatsby-gdpr-google-analytics=true" && cookieValue[0] !== "gatsby-gdpr-google-analytics=true"
+      ? setCookieAccepted(false)
+      : setCookieAccepted(true)
     window.addEventListener('scroll', (e) => {
       setWindowY(window.scrollY)
     });
@@ -26,13 +36,17 @@ const Layout = ({ children }) => {
 
   updateHeader(windowY)
 
+  const closeCookie = () => {
+    setCookieAccepted(true)
+  }
   return (
     <>
-      <Header fixed={headerState} />
+      <Header fixed={headerState} english={english} />
+      {cookieAccepted ? null : <CookieBar closeCookie={closeCookie} />}
       <div>
         <main>{children}</main>
       </div>
-      <Footer />
+      <Footer english={english} />
     </>
   )
 }
