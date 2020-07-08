@@ -1,13 +1,13 @@
 import React from "react"
 import Foldout from "./foldout"
 
-const ProcessSection = () => {
-  const foldoutData = [
-    { title: 'Uppstart.', text:'Vi ställer frågor om ditt företag genom ett konversationellt interface. Allt från affärsmodell till marknads segment.'},
-    { title: 'Utvärdering.', text:"Vi utvärderar dina svar annorlunda beroende på vilken industri du jobbar i. Sen sparar vi all information för byggnadsfasen."},
-    { title: 'Bygga.', text: 'När vi har utvärderat dina svar kan vi börja bygga hemsidan. Vår programvara plockar sedan ut komponenter från vår komponentkatalog som passar ditt företag. Sedan tillämpar vi ditt varumärke på hemsidan.'},
-    { title: 'Förbättra.', text: 'När din hemsida är live försöker vi omedelbart göra den ännu bättre genom modern mjukvaruteknik. Vi kan automatiskt göra ändringar till sida utan att du behöver lyfta ett finger.'}
-  ]
+const ProcessSection = ({title, fields}) => {
+  // const foldoutData = [
+  //   { title: 'Uppstart.', text:'Vi ställer frågor om ditt företag genom ett konversationellt interface. Allt från affärsmodell till marknads segment.'},
+  //   { title: 'Utvärdering.', text:"Vi utvärderar dina svar annorlunda beroende på vilken industri du jobbar i. Sen sparar vi all information för byggnadsfasen."},
+  //   { title: 'Bygga.', text: 'När vi har utvärderat dina svar kan vi börja bygga hemsidan. Vår programvara plockar sedan ut komponenter från vår komponentkatalog som passar ditt företag. Sedan tillämpar vi ditt varumärke på hemsidan.'},
+  //   { title: 'Förbättra.', text: 'När din hemsida är live försöker vi omedelbart göra den ännu bättre genom modern mjukvaruteknik. Vi kan automatiskt göra ändringar till sida utan att du behöver lyfta ett finger.'}
+  // ]
 
   // const foldoutData = [
   //   { title: 'Setup.', text: 'We ask you questions about your business through a conversational interface. Everything from business model to market segmentation.' },
@@ -15,15 +15,15 @@ const ProcessSection = () => {
   //   { title: 'Build.', text: 'When we have evaluated your answers we can start building your website. Our software then picks out components from our component-catalog that fits your business. Then we apply your branding to the website.' },
   //   { title: 'Improve.', text: 'When your website is live, we immediately try to make it even better through modern software technics. If your numbers are worse one month we respond to it immediately without you lifting a finger.' }
   // ]
+  
   return (
     <section className='ProcessSection'>
-      {/* <h3 className='ProcessSection__title'>How it works.</h3> */}
-      <h3 className='ProcessSection__title'>Hur vi skapar din hemsida.</h3>
+      <h3 className='ProcessSection__title'>{title[0].text}</h3>
       <div className='ProcessSection__container'>
         <div className='ProcessSection__foldoutContainer'>
 
-        {foldoutData.map((item, index) => {
-          return <Foldout title={item.title} text={item.text} key={index} index={index}/>
+        {fields.map((field, index) => {
+          return <Foldout title={field.foldout_title[0].text} text={field.foldout_text[0].text} key={index} index={index}/>
         })}
         </div>
 

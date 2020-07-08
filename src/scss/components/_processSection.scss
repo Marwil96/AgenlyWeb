@@ -29,7 +29,7 @@
     // min-height: 32rem;
 
     @include respond(tab-port) {
-      max-width: 100rem;
+      max-width: $content-max-width;
     }
   }
 

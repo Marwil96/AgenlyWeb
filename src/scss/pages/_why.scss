@@ -2,6 +2,9 @@
   @include mainContainer;
   flex-direction: column;
 
+  p {
+    margin-bottom: 0.8rem;
+  }
 
   h3 {
     font-size: 3.2rem;

@@ -1,9 +1,9 @@
 .ModulesLibrary {
   @include mainContainer;
-  margin-top: -14rem;
+  margin-top: -9rem;
 
   @include respond(phone) {
-    margin-top: -8.4rem;
+    margin-top: -5.4rem;
   }
   
   &__item {

@@ -1,0 +1,70 @@
+.MobileMenu {
+  display: none;
+  &__open {
+    position: fixed;
+    z-index: 1000;
+    width: calc(100% - 1.6rem);
+    height: calc(100% - 10rem);
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    top: 66px;
+    justify-content: space-between;
+    padding-left: 1.6rem;
+    padding-bottom: 3.2rem;
+    padding-top: 0rem;
+    padding-right: 1.6rem;
+  }
+
+  &__links {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    font-size: 2rem;
+    // text-decoration: underline;
+    transition: color ease 450ms;
+    color: $color-oil;
+    font-weight: 500;
+    margin-right: 2.4rem;
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-oil;
+
+    svg {
+      height: 14px;
+
+      path {
+        fill: $color-oil
+      }
+    }
+
+    &:first-child {
+      border-top: 1px solid $color-oil;
+    }
+
+    &:hover {
+      color: #E96E1F;
+    }
+  }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-right: 1.6rem;
+      margin-bottom: 1.6rem;
+      padding: 1.6rem;
+      width: auto;
+
+      &:last-child {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+}
