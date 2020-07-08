@@ -33,8 +33,8 @@ const MobileMenu = ({menuState, isEnglish}) => {
       </div>
 
       <div className="MobileMenu__button-container" style={isEnglish ? {display:'none'} : {}}>
-        <Button modifier="outline" text={isEnglish ? 'Login' : 'Logga in'} />
-        <Button text={isEnglish ? 'Get started' : 'Kom igång'} arrow />
+        <a href='https://app.agenly.se'><Button modifier="outline" text={isEnglish ? 'Login' : 'Logga in'} /></a>
+        <a href='https://app.agenly.se/createAccount'><Button text={isEnglish ? 'Get started' : 'Kom igång'} arrow /></a>
       </div>
     </div>
   )
