@@ -5,7 +5,7 @@ import scifi from "../images/logos/scifi.png"
 
 const ExampleSites = ({english}) => {
   const sites = [
-    { image: fik, link: "https://gildas-186c8uw4p.now.sh/" },
+    { image: fik, link: "https://vasakatten.agenly.se/" },
     { image: ffss, link: "https://agenly.website/" },
     { image: scifi, link: "https://sciencefictionforeningen.agenly.se/" },
   ]
