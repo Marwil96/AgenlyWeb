@@ -21,7 +21,7 @@ const PricingCard = ({focus, price, unit, title, helperText, subtitle, list, eng
           <span className='PricingCard__unit'>{unit[0].text}</span>
           {helperText ? <span className='PricingCard__helper-text'>{helperText[0].text}</span> : null}
         </div>
-        <a className='PricingCard__button' href='https://app.agenly.se/createAccount'><Button modifier='full-width' text={english ? 'Get started' : 'Kom igång'} arrow /></a>
+        <a className='PricingCard__button' href={english ? 'https://williammartinsson.typeform.com/to/NM0RvQyP' : 'https://app.agenly.se/createAccount'}><Button modifier='full-width' text={english ? 'Sign up for early access' : 'Kom igång'} arrow /></a>
       </div>
     </div>
   )
