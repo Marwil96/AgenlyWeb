@@ -59,12 +59,19 @@ exports.createPages = async ({ graphql, actions }) => {
   }
   )
 
-
-  console.log(cities)
-
   cities.forEach(city => {
     createPage({
       path: `/stad/${city.toLowerCase()}`,
+      component: cityTemplate,
+      context: {
+        city: city,
+      },
+    })
+  })
+
+  cities.forEach(city => {
+    createPage({
+      path: `en/stad/${city.toLowerCase()}`,
       component: cityTemplate,
       context: {
         city: city,
