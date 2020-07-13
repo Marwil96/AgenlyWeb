@@ -1,4 +1,5 @@
 const path = require("path")
+const cities = require("./src/utils/json/kommuner.json")
 var fs = require("fs")
 var dir = "./.cache/caches/gatsby-source-prismic-graphql"
 
@@ -42,6 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }`)
   const template = path.resolve("src/templates/feature.jsx")
   const template_feature_english = path.resolve("src/templates/feature.en.jsx")
+  const cityTemplate = path.resolve("src/templates/city.jsx")
   const legalTemplate = path.resolve("src/templates/legal.jsx")
 
   pages.data.prismic.allLegals.edges.forEach(edge => {
@@ -56,6 +58,19 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   }
   )
+
+
+  console.log(cities)
+
+  cities.forEach(city => {
+    createPage({
+      path: `/stad/${city.toLowerCase()}`,
+      component: cityTemplate,
+      context: {
+        city: city,
+      },
+    })
+  })
 
   pages.data.prismic.allFeaturess.edges.forEach(edge => {
     if(edge.node._meta.lang === 'sv-se') {
