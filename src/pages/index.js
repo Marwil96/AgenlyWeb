@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
       {windowEnglish ? null : <VideoThumb gif={thumbnail} clickHandler={() => setVideoActive(true) }/>}
       {videoActive ? (
         <VideoOverlay
-          src="http://player.vimeo.com/video/449309925?autoplay=1"
+          src="https://player.vimeo.com/video/449309925?autoplay=1"
           title="Agenly"
           clickHandler={() => setVideoActive(false)}
         />
