@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -11,9 +11,18 @@ import ProcessSection from "../components/processSection"
 import TenReasons from "../components/tenReasons"
 import ExampleSites from "../components/exampleSites"
 import SubscribePanel from "../components/subscribePanel"
+import VideoOverlay from "../components/videoOverlay"
+import VideoThumb from "../components/videoThumb"
+import thumbnail from '../images/AgenlyPromoThumb.gif'
 
 const IndexPage = ({ data }) => {
+  const [videoActive, setVideoActive ] = useState(false);
+  const [windowEnglish, setWindowEnglish] = useState(false)
   const IndexData = data.prismic.allHomepages.edges[0].node
+
+  useEffect(() => {
+    setWindowEnglish(window.location.pathname.startsWith("/en"))
+  }, [])
 
   return (
     <Layout>
@@ -28,6 +37,14 @@ const IndexPage = ({ data }) => {
         subtitle={IndexData.homepage_subtitle}
         image={IndexData.homepage_imageSharp.childImageSharp.fluid}
       />
+      {windowEnglish ? null : <VideoThumb gif={thumbnail} clickHandler={() => setVideoActive(true) }/>}
+      {videoActive ? (
+        <VideoOverlay
+          src="https://player.vimeo.com/video/449309925?autoplay=1"
+          title="Agenly"
+          clickHandler={() => setVideoActive(false)}
+        />
+      ) : null}
       {IndexData.body.map(component => {
         if (component.type === "feature_panel")
           return (

@@ -3,11 +3,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeader from "../components/pageHeader"
 import SubscribePanel from "../components/subscribePanel"
-import ModulesLibrary from "../components/modulesLibrary"
 import TitleBlock from "../components/titleblock"
 import MockupBlock from "../components/mockupBlock"
 import RedirectBlock from "../components/redirectBlock"
-import ImageBlock from "../components/ImageBlock"
 
 const City = ({pageContext}) => {
   return (
