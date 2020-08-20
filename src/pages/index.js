@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -17,7 +17,12 @@ import thumbnail from '../images/AgenlyPromoThumb.gif'
 
 const IndexPage = ({ data }) => {
   const [videoActive, setVideoActive ] = useState(false);
+  const [windowEnglish, setWindowEnglish] = useState(false)
   const IndexData = data.prismic.allHomepages.edges[0].node
+
+  useEffect(() => {
+    setWindowEnglish(window.location.pathname.startsWith("/en"))
+  }, [])
 
   return (
     <Layout>
@@ -32,7 +37,7 @@ const IndexPage = ({ data }) => {
         subtitle={IndexData.homepage_subtitle}
         image={IndexData.homepage_imageSharp.childImageSharp.fluid}
       />
-      {!window.location.pathname.startsWith("/en") ? <VideoThumb gif={thumbnail} clickHandler={() => setVideoActive(true)} /> : null}
+      {windowEnglish ? null : <VideoThumb gif={thumbnail} clickHandler={() => setVideoActive(true) }/>}
       {videoActive ? (
         <VideoOverlay
           src="http://player.vimeo.com/video/449309925?autoplay=1"
